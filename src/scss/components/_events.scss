@@ -1,0 +1,40 @@
+.events{
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+    &__slider{
+        position: relative;
+    }
+
+    &__title{
+        margin-bottom: 40px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    &__pagination{
+        /* stylelint-disable-next-line at-rule-no-unknown */
+        @include flex-c-sb;
+        
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+
+        gap: 10px;
+        
+
+    }
+
+    &__pagination-slides{
+        /* stylelint-disable-next-line at-rule-no-unknown */
+        @include flex-c-sb;
+        
+        gap: 5px;
+    }
+ 
+
+
+   
+}

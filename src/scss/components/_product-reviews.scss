@@ -1,0 +1,142 @@
+.product-reviews {
+    &__header{
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+    }
+
+    &__title{
+        margin-bottom: 40px;
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    &__review{
+        margin-bottom: 20px;
+    }
+
+    &__number{
+        margin-top: 40px;
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--color-lightgray);
+    }
+
+
+    &__container-btn{
+        text-align: center;
+    }
+
+    &__more-btn{
+        display: inline-flex !important;
+        width: 200px !important;
+    }
+}
+
+.rating-o{
+    padding: 10px 15px;
+
+    &__top{
+        display: flex;
+        margin-bottom: 10px;
+    }
+
+    &__value{
+        margin-right: 10px;
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--green-dark-color);
+    }
+
+    &__count{
+        margin-bottom: 10px;
+        font-size: 24px;
+        font-weight: 700;
+    }
+}
+
+.btn-galery{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    padding: 10px;
+
+    color: var(--green-dark-color);
+
+    border: 2px solid var(--hover-color);
+    border-radius: 40px;
+
+    transition: all 0.3s;
+
+    svg{
+        margin-right: 20px;
+    }
+
+    &:hover{
+        color:white;
+        background-color: var(--hover-color);
+    }
+}
+
+.review{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    padding: 20px 20px 40px;
+    background-color: var(--blue-light-color);
+
+    &__left{
+        padding-right: 40px;
+    }
+
+    &__data{
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--hover-color);
+    }
+
+    &__right{
+        padding-right: 200px;
+
+    }
+
+    &__header{
+        display: flex;
+        align-items: start;
+        margin-bottom: 20px;
+    }
+
+    &__avatar{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+
+        background-color: var(--blue-color);
+        border-radius: 100%;
+    }
+
+    &__name{
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--color-cadet);
+    }
+
+    &__location
+    {
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--color-cadet);
+    }
+
+    &__text{
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.5;
+        color: var(--color-lightgray);
+    }
+
+}

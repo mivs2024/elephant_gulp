@@ -1,0 +1,85 @@
+.header {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100px;
+    
+    color: var(--color-cadet);
+
+    background-color: var(--bg-color);
+
+    transition: background 0.2s ;
+
+    &--transparent {
+        background-color: transparent;
+    }
+
+    &__container {
+        position: relative;
+        height: 100%;
+        padding: 20px 0;
+
+        /* stylelint-disable-next-line at-rule-no-unknown */
+        @include flex-c-sb;
+    }
+
+    &__shop{
+        position: absolute;
+        top: 23px;
+        left: 210px;
+        transform: rotate(10deg);
+
+        font-size: 47px;
+        font-weight: 700;
+        color: var(--teal-color);
+        
+        opacity: 0;
+        box-shadow: 2px 2px 10px;
+        
+    }
+
+    &--shop    &__shop{
+            opacity: 1;
+        }
+    
+
+    &__right {
+        /* stylelint-disable-next-line at-rule-no-unknown */
+        @include flex-c-sb;
+        
+        gap: 16px;
+    }
+
+    &__location {
+        /* stylelint-disable-next-line at-rule-no-unknown */
+        @include flex-c-sb;
+
+        gap: 8px;
+
+    }
+
+    &__tel,
+    &__email {
+        /* stylelint-disable-next-line at-rule-no-unknown */
+        @include flex-c-sb;
+        
+        gap: 8px;
+    }
+
+    &__burger {
+        margin-right: 10px;
+    }
+
+    &__circle {
+        width: 14px;
+        height: 14px;
+
+        background-color: var(--dark-color);
+        border-radius: 50%;
+
+        transition: 0.2s;
+    }
+}

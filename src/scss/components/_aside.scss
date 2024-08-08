@@ -1,0 +1,121 @@
+.aside {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+
+    
+    width: 320px;
+    height: 100vh;
+    padding: 20px 40px;
+
+    font-size: 18px;
+    
+    background-color: var(--bg-color);
+
+    transition: transform 0.5s;
+
+    &.open{
+    transform: translateX(0);
+    }
+
+    &__inner{
+        overflow-y: auto;
+        width: 100%;
+        height: 100%;
+
+    }
+
+    &__top {
+        /* stylelint-disable-next-line at-rule-no-unknown */
+        @include flex-c-sb;
+
+        margin-bottom: 25px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--focus-color);
+    }
+
+    &__close{
+        margin-right: 20px;
+    }
+
+    &__nav {
+        margin-bottom: 25px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--focus-color);
+    }
+
+    &__list {
+        row-gap: 20px;
+
+        /* stylelint-disable-next-line at-rule-no-unknown */
+        @include flex-column-start;
+    }
+
+    &__item {
+        gap: 1px;
+        /* stylelint-disable-next-line at-rule-no-unknown */
+        @include flex-c-sb;
+
+        transition: gap 0.3s;
+
+        &::after {
+            content: "";
+
+            width: 7px;
+            height: 12px;
+
+            color: var(--teal-color);
+
+            visibility: hidden;
+            opacity: 0;
+            background-image: url("../images/aside-arrow-link.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            
+            transition: opacity 0.3s;
+
+        }
+
+        &:hover {
+            gap: 20px;
+
+            &::after {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+
+    &__town {
+        margin-bottom: 25px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--focus-color);
+    }
+
+    &__address {
+        /* stylelint-disable-next-line at-rule-no-unknown */
+        @include flex-column-sb;
+        
+        row-gap: 20px;
+        margin-bottom: 25px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--focus-color);
+    }
+
+    &__socials{
+        color: var(--dark-color);
+        
+        span{
+            display: block;
+            margin-bottom: 20px;
+        }
+
+    }
+}
+
+.simplebar-scrollbar::before {
+    background-color: var(--teal-color) !important;
+  }

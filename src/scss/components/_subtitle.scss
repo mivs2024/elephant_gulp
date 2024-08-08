@@ -1,0 +1,29 @@
+.subtitle{
+    position: relative;
+    z-index: 1;
+
+    max-width: 370px;
+    margin-bottom: 15px;
+    
+    font-size: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &::after{
+        content: '';
+    
+        position: absolute;
+        z-index: -1;
+        top: -11px;
+        right: -11px;
+
+        width: 50px;
+        height: 54px;
+
+        background-color: transparent;
+        background-image: url("../images/leaf.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+}

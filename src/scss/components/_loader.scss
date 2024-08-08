@@ -1,0 +1,40 @@
+.loader {
+  --transition-time: 0.3s;
+
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  visibility: hidden;
+  opacity: 0;
+  background-color: #000000b3;
+
+  transition:
+    opacity var(--transition-time),
+    visibility var(--transition-time);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.loader__container {
+  position: relative;
+
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  padding: 20px;
+  
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.loader.is-open {
+  visibility: visible;
+  opacity: 1;
+  transition:
+    opacity var(--transition-time),
+    visibility var(--transition-time);
+}

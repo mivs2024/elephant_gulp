@@ -1,0 +1,22 @@
+.hero-product {
+    position: relative;
+ 
+
+    &__content {
+        padding-top: 128px;
+        padding-bottom: 100px;
+    }
+
+    &__container {
+        /* stylelint-disable-next-line at-rule-no-unknown */
+        @include flex-column-start;
+    }
+
+    &__title {
+        margin-top: 100px;
+        margin-bottom: 30px;
+        font-size: 36px;
+        font-weight: 700;
+    }
+   
+}

@@ -1,0 +1,53 @@
+.events-prev {
+    margin-top: 200px;
+    margin-bottom: 100px;
+    
+    &__container{
+        position: relative;
+        padding-top: 150px;
+
+    }
+
+    &__inner {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        padding: 0 30px;
+
+    }
+
+    &__title {
+        font-size: 30px;
+        font-weight: 600;
+        color: var(--color-cadet);
+    }
+
+    &__left {
+        grid-column: 4 span;
+        padding: 20px;
+    }
+
+    &__slider {
+        position: relative;
+        grid-column: 8 span;
+    }
+
+    &__prev {
+        right: 50px;
+    }
+
+    &__next {
+        right: 0;
+    }
+
+    &__prev,
+    &__next {
+        position: absolute;
+        z-index: 2;
+        top: -50px;
+
+        color:aqua;
+
+        border: none;
+    }
+}

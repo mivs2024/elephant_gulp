@@ -1,0 +1,32 @@
+.slogan {
+    display: flex;
+    font-size: 14px;
+
+    &__text {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    
+        padding: 5px 10px;
+
+        background-color: var(--blue-color);
+    }
+
+    &__text1 {
+        color: white;
+    }
+
+    &__text2 {
+        color: var(--color-cadet);
+    }
+
+    &__right {
+        display: block;
+
+        width: 0;
+        height: 0;
+
+        border-top: 30px solid var(--blue-color) !important;;
+        border-right: 20px solid transparent;
+    }
+}

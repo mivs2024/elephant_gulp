@@ -1,0 +1,40 @@
+@mixin flex-c-sb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-start-sb {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+@mixin flex-c-c {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-column-start {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@mixin flex-column-sb {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin cursor-custom{
+  cursor: url(/images/cursor.svg), auto;
+
+}

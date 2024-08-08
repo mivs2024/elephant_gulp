@@ -1,0 +1,601 @@
+[{
+    "id": 1,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card11.jpg","card12.jpg","card13.jpg"],
+    "brand": "Nana",
+    "rating": 5.0,
+    "reviews": 35
+},
+{
+    "id": 2,
+    "name": "Сумка",
+    "price": 1200,
+    "prevPrice": 1600,
+    "images":["card21.jpg","card22.jpg","card23.jpg"],
+    "brand": "Baiyoke",
+    "rating": 4.2,
+    "reviews": 456
+},
+{
+    "id": 3,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card31.jpg","card32.jpg","card33.jpg"],
+    "brand": "Taibrand",
+    "rating": 4.5,
+    "reviews": 35
+},
+{
+    "id": 4,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card41.jpg","card42.jpg","card43.jpg"],
+    "brand": "Baiyoke",
+    "rating": 4.0,
+    "reviews": 35
+},
+{
+    "id": 5,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card21.webp","card22.webp","card23.webp"],
+    "brand": "SoiSky",
+    "rating": 4.1,
+    "reviews": 35
+},
+{
+    "id": 6,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card31.webp","card32.webp","card33.webp"],
+    "brand": "Baiyoke",
+    "rating": 4.5,
+    "reviews": 35
+},
+{
+    "id": 7,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card41.webp","card42.webp","card43.webp"],
+    "brand": "Taibrand",
+    "rating": 4.1,
+    "reviews": 35
+},
+{
+    "id": 8,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card51.jpg","card52.jpg","card53.jpg"],
+    "brand": "SoiSky",
+    "rating": 4.5,
+    "reviews": 35
+},
+{
+    "id": 9,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card61.jpg","card62.jpg","card63.jpg"],
+    "brand": "Nana",
+    "rating": 4.7,
+    "reviews": 35
+},
+{
+    "id": 10,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card51.webp","card52.webp","card53.webp"],
+    "brand": "Baiyoke",
+    "rating": 4.2,
+    "reviews": 35
+},
+{
+    "id": 11,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card61.webp","card62.webp","card63.webp"],
+    "brand": "SoiSky",
+    "rating": 4.3,
+    "reviews": 35
+},
+{
+    "id": 12,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card71.jpg","card72.jpg","card73.jpg"],
+    "brand": "Taibrand",
+    "rating": 4.0,
+    "reviews": 35
+},
+{
+    "id": 13,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card81.jpg","card82.jpg","card83.jpg"],
+    "brand": "Baiyoke",
+    "rating": 2.5,
+    "reviews": 35
+},
+{
+    "id": 14,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card91.jpg","card92.jpg","card93.jpg"],
+    "brand": "Taibrand",
+    "rating": 4.1,
+    "reviews": 35
+},
+{
+    "id": 15,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card101.jpg","card102.jpg","card103.jpg"],
+    "brand": "SoiSky",
+    "rating": 4.9,
+    "reviews": 35
+},
+{
+    "id": 16,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card111.jpg","card112.jpg","card113.jpg"],
+    "brand": "Nana",
+    "rating": 4.7,
+    "reviews": 35
+},
+{
+    "id": 17,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card11.jpg","card122.jpg","card123.jpg"],
+    "brand": "Baiyoke",
+    "rating": 3.5,
+    "reviews": 35
+},
+{
+    "id": 18,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card131.jpg","card132.jpg","card133.jpg"],
+    "brand": "Taibrand",
+    "rating": 3.5,
+    "reviews": 35
+},
+{
+    "id": 19,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card151.jpg","card152.jpg","card153.jpg"],
+    "brand": "Taibrand",
+    "rating": 4.1,
+    "reviews": 35
+},
+{
+    "id": 20,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card141.jpg","card142.jpg","card143.jpg"],
+    "brand": "SoiSky",
+    "rating": 4.0,
+    "reviews": 35
+},
+{
+    "id": 21,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card11.jpg","card12.jpg","card13.jpg"],
+    "brand": "Nana",
+    "rating": 5.0,
+    "reviews": 35
+},
+{
+    "id": 22,
+    "name": "Сумка",
+    "price": 1200,
+    "prevPrice": 1600,
+    "images":["card21.jpg","card22.jpg","card23.jpg"],
+    "brand": "Baiyoke",
+    "rating": 4.2,
+    "reviews": 456
+},
+{
+    "id": 23,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card31.jpg","card32.jpg","card33.jpg"],
+    "brand": "Taibrand",
+    "rating": 4.5,
+    "reviews": 35
+},
+{
+    "id": 24,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card41.jpg","card42.jpg","card43.jpg"],
+    "brand": "Baiyoke",
+    "rating": 4.0,
+    "reviews": 35
+},
+{
+    "id": 25,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card21.webp","card22.webp","card23.webp"],
+    "brand": "SoiSky",
+    "rating": 4.1,
+    "reviews": 35
+},
+{
+    "id": 26,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card31.webp","card32.webp","card33.webp"],
+    "brand": "Baiyoke",
+    "rating": 4.5,
+    "reviews": 35
+},
+{
+    "id": 27,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card41.webp","card42.webp","card43.webp"],
+    "brand": "Taibrand",
+    "rating": 4.1,
+    "reviews": 35
+},
+{
+    "id": 28,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card51.jpg","card52.jpg","card53.jpg"],
+    "brand": "SoiSky",
+    "rating": 4.5,
+    "reviews": 35
+},
+{
+    "id": 29,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card61.jpg","card62.jpg","card63.jpg"],
+    "brand": "Nana",
+    "rating": 4.7,
+    "reviews": 35
+},
+{
+    "id": 30,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card51.webp","card52.webp","card53.webp"],
+    "brand": "Baiyoke",
+    "rating": 4.2,
+    "reviews": 35
+},
+{
+    "id": 31,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card61.webp","card62.webp","card63.webp"],
+    "brand": "SoiSky",
+    "rating": 4.3,
+    "reviews": 35
+},
+{
+    "id": 32,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card71.jpg","card72.jpg","card73.jpg"],
+    "brand": "Taibrand",
+    "rating": 4.0,
+    "reviews": 35
+},
+{
+    "id": 33,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card81.jpg","card82.jpg","card83.jpg"],
+    "brand": "Baiyoke",
+    "rating": 2.5,
+    "reviews": 35
+},
+{
+    "id": 34,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card91.jpg","card92.jpg","card93.jpg"],
+    "brand": "Taibrand",
+    "rating": 4.1,
+    "reviews": 35
+},
+{
+    "id": 35,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card101.jpg","card102.jpg","card103.jpg"],
+    "brand": "SoiSky",
+    "rating": 4.9,
+    "reviews": 35
+},
+{
+    "id": 36,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card111.jpg","card112.jpg","card113.jpg"],
+    "brand": "Nana",
+    "rating": 4.7,
+    "reviews": 35
+},
+{
+    "id": 37,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card11.jpg","card122.jpg","card123.jpg"],
+    "brand": "Baiyoke",
+    "rating": 3.5,
+    "reviews": 35
+},
+{
+    "id": 38,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card131.jpg","card132.jpg","card133.jpg"],
+    "brand": "Taibrand",
+    "rating": 3.5,
+    "reviews": 35
+},
+{
+    "id": 39,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card151.jpg","card152.jpg","card153.jpg"],
+    "brand": "Taibrand",
+    "rating": 4.1,
+    "reviews": 35
+},
+{
+    "id": 40,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card141.jpg","card142.jpg","card143.jpg"],
+    "brand": "SoiSky",
+    "rating": 4.0,
+    "reviews": 35
+},
+{
+    "id": 41,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card11.jpg","card12.jpg","card13.jpg"],
+    "brand": "Nana",
+    "rating": 5.0,
+    "reviews": 35
+},
+{
+    "id": 42,
+    "name": "Сумка",
+    "price": 1200,
+    "prevPrice": 1600,
+    "images":["card21.jpg","card22.jpg","card23.jpg"],
+    "brand": "Baiyoke",
+    "rating": 4.2,
+    "reviews": 456
+},
+{
+    "id": 43,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card31.jpg","card32.jpg","card33.jpg"],
+    "brand": "Taibrand",
+    "rating": 4.5,
+    "reviews": 35
+},
+{
+    "id": 44,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card41.jpg","card42.jpg","card43.jpg"],
+    "brand": "Baiyoke",
+    "rating": 4.0,
+    "reviews": 35
+},
+{
+    "id": 45,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card21.webp","card22.webp","card23.webp"],
+    "brand": "SoiSky",
+    "rating": 4.1,
+    "reviews": 35
+},
+{
+    "id": 46,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card31.webp","card32.webp","card33.webp"],
+    "brand": "Baiyoke",
+    "rating": 4.5,
+    "reviews": 35
+},
+{
+    "id": 47,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card41.webp","card42.webp","card43.webp"],
+    "brand": "Taibrand",
+    "rating": 4.1,
+    "reviews": 35
+},
+{
+    "id": 48,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card51.jpg","card52.jpg","card53.jpg"],
+    "brand": "SoiSky",
+    "rating": 4.5,
+    "reviews": 35
+},
+{
+    "id": 49,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card61.jpg","card62.jpg","card63.jpg"],
+    "brand": "Nana",
+    "rating": 4.7,
+    "reviews": 35
+},
+{
+    "id": 50,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card51.webp","card52.webp","card53.webp"],
+    "brand": "Baiyoke",
+    "rating": 4.2,
+    "reviews": 35
+},
+{
+    "id": 51,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card61.webp","card62.webp","card63.webp"],
+    "brand": "SoiSky",
+    "rating": 4.3,
+    "reviews": 35
+},
+{
+    "id": 52,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card71.jpg","card72.jpg","card73.jpg"],
+    "brand": "Taibrand",
+    "rating": 4.0,
+    "reviews": 35
+},
+{
+    "id": 53,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card81.jpg","card82.jpg","card83.jpg"],
+    "brand": "Baiyoke",
+    "rating": 2.5,
+    "reviews": 35
+},
+{
+    "id": 54,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card91.jpg","card92.jpg","card93.jpg"],
+    "brand": "Taibrand",
+    "rating": 4.1,
+    "reviews": 35
+},
+{
+    "id": 55,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card101.jpg","card102.jpg","card103.jpg"],
+    "brand": "SoiSky",
+    "rating": 4.9,
+    "reviews": 35
+},
+{
+    "id": 56,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card111.jpg","card112.jpg","card113.jpg"],
+    "brand": "Nana",
+    "rating": 4.7,
+    "reviews": 35
+},
+{
+    "id": 57,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card11.jpg","card122.jpg","card123.jpg"],
+    "brand": "Baiyoke",
+    "rating": 3.5,
+    "reviews": 35
+},
+{
+    "id": 58,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card131.jpg","card132.jpg","card133.jpg"],
+    "brand": "Taibrand",
+    "rating": 3.5,
+    "reviews": 35
+},
+{
+    "id": 59,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card151.jpg","card152.jpg","card153.jpg"],
+    "brand": "Taibrand",
+    "rating": 4.1,
+    "reviews": 35
+},
+{
+    "id": 60,
+    "name": "Сумка для слона",
+    "price": 1500,
+    "prevPrice": 2000,
+    "images":["card141.jpg","card142.jpg","card143.jpg"],
+    "brand": "SoiSky",
+    "rating": 4.0,
+    "reviews": 35
+}
+]

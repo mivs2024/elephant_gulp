@@ -1,0 +1,33 @@
+.services{
+    margin-bottom: 100px;
+
+    &__slider{
+        position: relative;
+    }
+
+    &__title{
+        margin-bottom: 40px;
+    }
+
+ 
+    &__prev{
+        left: -50px;
+    }
+
+    &__next{
+        right: -50px;
+    }
+
+    &__prev, &__next{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+       
+    }
+
+    &__pagination{
+        margin-top: 10px;
+        
+    }
+  
+}

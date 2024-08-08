@@ -1,0 +1,39 @@
+.connect {
+    position: relative;
+    margin-top: 100px;
+    padding-bottom: 40px;
+
+    &::before {
+        content: "";
+
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        opacity: 0.7;
+        background-color: var(--bg-color);
+        background-image: url("../images/connect-bg.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    &__container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding-top: 40px;
+    }
+
+    &__subtitle {
+        text-transform: none;
+    }
+
+    &__form{
+        width: 400px;
+    }
+}

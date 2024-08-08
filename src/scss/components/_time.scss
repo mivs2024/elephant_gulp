@@ -1,0 +1,51 @@
+.time {
+    cursor: pointer;
+
+    position: relative;
+
+    display: flex;
+    gap: 32px;
+    align-items: center;
+
+    height: 70px;
+
+    color:var(--color-gray);
+
+    &--active{
+        color: var(--green-dark-color);
+    }
+
+    &__circle {
+        position: relative;
+        z-index: 1;
+
+        flex: 0 0 auto;
+
+        width: 10px;
+        height: 10px;
+
+        fill: currentcolor;
+        stroke: currentcolor;
+    }
+
+    &__text {
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    /* stylelint-disable-next-line order/order */
+    &::before {
+        content: "";
+
+        position: absolute;
+        top: 0;
+        left: 4px;
+
+        width: 1px;
+        height: 100%;
+
+        opacity: 0.5;
+        background-color:var(--color-gray);
+    }
+}
+

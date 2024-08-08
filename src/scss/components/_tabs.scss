@@ -1,0 +1,24 @@
+.tabs {
+    display: flex;
+    align-items: center;
+
+    &__item {
+        cursor: pointer;
+
+        padding: 10px 20px;
+
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--dark-color);
+        
+        background-color: transparent;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+
+        &.active {
+            color: white;
+            background-color: var(--color-cadet);
+        }
+
+    }
+}

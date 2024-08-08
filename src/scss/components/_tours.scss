@@ -1,0 +1,21 @@
+.tours {
+   &__container{
+    position: relative;
+    padding-top: 150px;
+   }
+
+   &__inner {
+       position: relative;
+
+       display: grid;
+       grid-template-columns: repeat(12, 1fr);
+       gap: 20px;
+
+       padding: 0 30px;
+
+    }
+
+    &__card {
+        grid-column: 4 span;
+    }
+}

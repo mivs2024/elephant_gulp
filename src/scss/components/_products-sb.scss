@@ -1,0 +1,35 @@
+.products-sb{
+    margin-bottom: 100px;
+
+    &__slider{
+        position: relative;
+    }
+
+    &__title{
+        margin-bottom: 40px;
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+ 
+    &__prev{
+        left: -50px;
+    }
+
+    &__next{
+        right: -50px;
+    }
+
+    &__prev, &__next{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+       
+    }
+
+    &__pagination{
+        margin-top: 10px;
+        
+    }
+  
+}

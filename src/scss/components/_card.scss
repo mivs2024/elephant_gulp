@@ -1,0 +1,38 @@
+.card {
+    padding: 27px 24px 30px;
+
+    background-color: var(--bg-color);
+    border: 1px solid #cecdce;
+    border-radius: 8px;
+    
+    transition: background-color .2s;
+    
+    &:hover{
+        background-color: var(--card-bg-color);
+    }
+
+    &__link {
+        /* stylelint-disable-next-line at-rule-no-unknown */
+        @include flex-column-start;
+    }
+
+    img {
+        width: 32px;
+        height: 32px;
+        margin-bottom: 76px;
+        object-fit: contain;
+    }
+
+    &__title{
+        margin-bottom: 20px;
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--dark-color);
+    }
+    
+    &__text{
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--dark-color);
+    }
+}

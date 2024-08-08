@@ -1,0 +1,23 @@
+.slider-pagination {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+
+    &__bullet {
+        display: block;
+        
+        width: 6px;
+        height: 6px;
+        
+        background-color: #cac1c1;
+
+        transition:
+            transform 0.2s,
+            background-color 0.2s;
+    }
+
+    &__bullet--active {
+        transform: scaleX(2);
+        background-color: var(--teal-color);
+    }
+}

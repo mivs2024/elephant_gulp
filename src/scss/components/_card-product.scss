@@ -1,0 +1,118 @@
+.card-product {
+    position: relative;
+    overflow: hidden;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    
+    &__link {
+        display: flex;
+        flex-direction: column;
+        max-width: 500px;
+    }
+
+    &__label{
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        
+        width: 45%;
+        padding: 9px;
+
+        background-color: var(--color-crystal);
+        border-radius: 0 0 20px;
+    }
+
+    &__images {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+       
+        &::before {
+            content: "";
+            padding-top: 100%;
+        }
+    }
+
+    img {
+        pointer-events: none;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        opacity: 0;
+    }
+
+    &__image:first-child {
+        img {
+            opacity: 1;
+        }
+    }
+
+    &__image {
+        flex: 1 1 auto;
+
+        &:hover {
+            img {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__title {
+        margin-top: 20px;
+        padding: 0 10px;
+        padding-bottom: 20px;
+        
+        
+
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--color-cadet);
+    }
+
+    &__text {
+        display: none;
+
+        margin-top: 10px;
+        padding: 0 10px;
+        padding-bottom: 20px;
+
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    &__price {
+        display: flex;
+        column-gap: 5px;
+        align-items: end;
+        
+        margin-top: 10px;
+        padding: 0 10px;
+    }
+
+    &__price-current {
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--teal-color);
+        letter-spacing: 0.4px;
+    }
+    
+    &__price-prev {
+        font-size: 14px;
+        font-weight: 500;
+        color: #99a3ae;;
+        text-decoration: line-through;
+        letter-spacing: 0.2px;
+    }
+
+    &__price-discount {
+        font-size: 14px;
+        font-weight: 700;
+        color: #c21c69;;
+    }
+}

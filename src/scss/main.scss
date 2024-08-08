@@ -1,0 +1,97 @@
+@import "reset";
+@import "vars";
+@import "fonts";
+@import "font-awesome";
+@import "settings";
+@import "mixins";
+@import "choices";
+
+
+
+@import "./components/btn";
+@import "./components/checkbox";
+@import "./components/checkbox";
+@import "./components/range-slider";
+@import "./components/to-top";
+@import "./components/tabs";
+@import "./components/banner";
+@import "./components/background";
+@import "./components/breadcrumbs";
+@import "./components/slider-nav.scss";
+@import "./components/slider-pagination.scss";
+@import "./components/card";
+@import "./components/card-c";
+@import "./components/card-ss";
+@import "./components/socials";
+@import "./components/form-connect";
+@import "./components/subtitle";
+@import "./components/title";
+@import "./components/section-title";
+@import "./components/top-image-bg";
+@import "./components/card-services";
+@import "./components/card-product";
+@import "./components/card-worker";
+@import "./components/card-events";
+@import "./components/time";
+@import "./components/card-en";
+@import "./components/card-ep";
+@import "./components/card-news";
+@import "./components/card-t";
+@import "./components/block";
+@import "./components/slogan";
+@import "./components/dropdown";
+@import "./components/rating";
+
+// компоненты страницы index
+@import "./components/header";
+@import "./components/hero";
+@import "./components/services";
+@import "./components/popular-products";
+@import "./components/events";
+@import "./components/tours";
+@import "./components/connect";
+@import "./components/footer";
+@import "./components/aside";
+@import "./components/shadow";
+@import "./components/modal";
+@import "./components/player";
+
+// компоненты страницы services
+@import "./components/hero-services";
+@import "./components/services-services";
+@import "./components/services-popular";
+@import "./components/workers";
+
+// компоненты страницы events
+@import "./components/hero-events";
+@import "./components/events-next";
+@import "./components/events-prev";
+
+// компоненты страницы tour
+@import "./components/tour-section";
+@import "./components/hero-tour";
+
+// компоненты страницы product
+@import "./components/hero-product";
+@import "./components/product-card";
+@import "./components/products-sb";
+@import "./components/product-reviews";
+@import "./components/product-media";
+
+// компоненты страницы catalog
+@import "./components/hero-catalog";
+@import "./components/catalog-section";
+@import "./components/loader";
+@import "./components/pagination";
+
+// компоненты страницы about
+@import "./components/hero-about";
+@import "./components/about-values";
+@import "./components/about-workers";
+
+// компоненты страницы about
+@import "./components/hero-contacts";
+@import "./components/contacts-section";
+@import "./components/contacts-map";
+
+

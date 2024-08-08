@@ -1,0 +1,42 @@
+.checkbox {
+    cursor: pointer;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    
+    padding-left: 30px;
+
+    input {
+        display: none;
+    }
+
+
+
+    &__text {
+        flex: 1 1 100%;
+    }
+
+    &__decor {
+        content: "";
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 16px;
+        height: 16px;
+        margin-right: 10px;
+
+        border: 1px solid var(--teal-color);
+        border-radius: 5px;
+    }
+
+    input:checked + &__decor {
+        background:  url("../images/check.svg") no-repeat center center;
+        background-color: var(--teal-color);
+        border: 1px solid var(--teal-color);
+    }
+}

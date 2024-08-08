@@ -1,0 +1,22 @@
+.services-services{
+    margin-top: 50px;
+
+    &__tabs{
+        margin-bottom: 20px;
+    }
+
+    &__card{
+        grid-column: 6 span;
+        margin-bottom: 20px;
+    }
+
+
+    
+    &__block{
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        gap: 10px;
+
+    }
+
+}

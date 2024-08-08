@@ -1,0 +1,40 @@
+.rating{
+    position: relative;
+    white-space: nowrap;
+
+  
+    &__star-stroke{
+        display: inline-block;
+
+        width: 20px;
+        height: 20px;
+
+        background-image: url("../images/rating/star-y-stroke.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    
+    &__star-fill{
+        display: inline-block;
+
+        width: 20px;
+        height: 20px;
+        
+        background-image: url("../images/rating/star-y-fill.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    
+    &__fill{
+        position: absolute;
+        top: 0;
+        left: 0;
+        
+        overflow: hidden;
+
+        width: 67%;
+       
+      
+    }
+
+}

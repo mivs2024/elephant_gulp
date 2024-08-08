@@ -1,0 +1,21 @@
+.btn {
+    height: 48px;
+    padding: 0 15px;
+    
+    font-size: 1rem;
+    color: #fff;
+
+    background-color: var(--teal-color);
+    border-radius: 7px;
+    
+    transition: background-color 0.2s;
+
+    &:focus {
+        outline: 2px solid var(--focus-color);
+        outline-offset: 2px;
+      }
+
+    &:hover{
+        background-color: var(--hover-color);
+    }
+}

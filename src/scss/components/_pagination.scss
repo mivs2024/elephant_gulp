@@ -1,0 +1,28 @@
+.pagination {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+
+    &__item {
+        margin-right: 10px;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 29px;
+        height: 32px;
+
+        color: var(--blue-color);
+
+        border-radius: 4px;
+
+        &--active {
+            color: white;
+            background-color: var(--hover-color);
+        }
+    }
+}

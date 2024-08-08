@@ -1,0 +1,28 @@
+.workers{
+    margin-top: 100px;
+
+    &__title{
+        margin-bottom: 30px;
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    &__slider{
+        position: relative;
+    }
+
+    &__prev{
+        left: -50px;
+    }
+
+    &__next{
+        right: -50px;
+    }
+
+    &__prev, &__next{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+       
+    }
+}
