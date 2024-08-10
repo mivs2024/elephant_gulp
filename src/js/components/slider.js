@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination, EffectFade } from 'swiper/modules';
+import { Navigation, Pagination, EffectFade ,Thumbs} from 'swiper/modules';
 // import Swiper and modules styles
 // import 'swiper/swiper-bundle.css';
 import 'swiper/css';
@@ -70,6 +70,37 @@ if(popularSlider){
         },
     });
 }
+
+const  reviewsSlider = document.querySelector('.reviews-media__slider')
+const  reviewsSlider2 = document.querySelector('.reviews-media__slider2')
+
+if(reviewsSlider&&reviewsSlider2){
+
+    
+
+    const swiper2 = new Swiper(reviewsSlider2, {
+        spaceBetween: 10,
+        slidesPerView: 8,
+        freeMode: true,
+     
+        watchSlidesProgress: true,
+    });
+
+    const swiper =  new Swiper(reviewsSlider, {
+        spaceBetween: 10,
+        // configure Swiper to use modules
+        modules: [Navigation, Thumbs],
+        // Navigation arrows
+        navigation: {
+            nextEl: '.reviews-media__next',
+            prevEl: '.reviews-media__prev',
+        },
+        thumbs:{
+            swiper:swiper2
+        }
+    });
+}
+
 const  productsSbSlider = document.querySelector('.products-sb-slider')
 
 if(productsSbSlider){

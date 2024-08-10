@@ -1,31 +1,26 @@
-.section-title{
+.section-title {
     display: inline-flex;
     gap: 1px;
     align-items: center;
-    
+
     color: var(--color-cadet);
 
-    transition:  gap 0.3s;
+    transition: gap 0.3s;
 
-    &__title{
-        font-size: 24px;
-        font-weight: 600;
-    }
-
-    svg{
-        transform: rotate(45deg);
+  
+    span {
+        font-family: FontAwesome, sans-serif;
         color: var(--teal-color);
         opacity: 0;
-        transition:  opacity 0.3s;
+
     }
 
-    &:hover{
+    &:hover {
         gap: 20px;
         color: var(--teal-color);
 
-        svg{
+        span {
             opacity: 1;
         }
     }
-
 }

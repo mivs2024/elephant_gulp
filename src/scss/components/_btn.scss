@@ -19,3 +19,29 @@
         background-color: var(--hover-color);
     }
 }
+
+.btn-photo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    padding: 10px;
+
+    color: var(--green-dark-color);
+
+    border: 2px solid var(--hover-color);
+    border-radius: 40px;
+
+    transition: all 0.3s;
+     
+    span{
+        margin-right: 15px;
+        font-family: FontAwesome,sans-serif;
+    }
+
+    &:hover{
+        color:white;
+        background-color: var(--hover-color);
+    }
+}

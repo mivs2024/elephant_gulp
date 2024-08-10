@@ -1,23 +1,21 @@
-import './components/slider'
 import './components/map'
+import './components/slider'
 // import './components/range-slider'
+import 'simplebar/dist/simplebar.css'
 import './components/aside'
+import './components/catalog'
+import './components/dropdown'
+import './components/header'
+import './components/media'
 import './components/modal'
 import './components/player'
-import './components/smooth-scroll'
-import './components/tabs'
-import './components/media'
 import './components/product'
-import './components/dropdown'
+import './components/reviews-page.js'
+import './components/reviews.js'
 import './components/selects'
-import './components/header'
-import './components/catalog'
-import SimpleBar from 'simplebar';
-import 'simplebar/dist/simplebar.css';
+import './components/smooth-scroll'
+import './components/tabs-media'
+import './components/tabs-services'
 
-  export const getQueryParams = (key) => {
-    const url = new URL(window.location);
-    console.log(url.searchParams.toString());
-    return url.searchParams.get(key);
-  };
+
 

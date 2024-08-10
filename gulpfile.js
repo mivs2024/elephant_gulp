@@ -6,16 +6,9 @@ const webpack = require('webpack-stream');
 const uglify = require('gulp-uglify-es').default;
 const browserSync = require('browser-sync').create();
 const autoprefixer = require('gulp-autoprefixer');
-const postcss = require('gulp-postcss')
-const babel = require('gulp-babel');
-const webp = require('gulp-webp');
-const imagemin = require('gulp-imagemin');
 const svgSprite = require('gulp-svg-sprite');
-const fonter = require('gulp-fonter');
-const ttf2woff2 = require('gulp-ttf2woff2');
 const fileinclude = require('gulp-file-include');
 const del = require('del');
-const avif = require('gulp-avif');
 const sourcemaps = require('gulp-sourcemaps');
 var notify = require("gulp-notify");
 var plumber = require('gulp-plumber');
@@ -133,41 +126,6 @@ function clean() {
 
 
 
-// function jsProd(cb) {
-//     return gulp.src(path.src.js, {base: srcPath + 'assets/js/'})
-//         .pipe(plumber({
-//             errorHandler : function(err) {
-//                 notify.onError({
-//                     title:    "JS Error",
-//                     message:  "Error: <%= error.message %>"
-//                 })(err);
-//                 this.emit('end');
-//             }
-//         }))
-//         .pipe(webpack({
-//           mode: "production",
-//           output: {
-//             filename: 'app.js',
-//           },
-
-//         module: {
-//             rules: [
-//               {
-//                 test: /\.(js)$/,
-//                 exclude: /(node_modules)/,
-//                 loader: 'babel-loader',
-//                 options: {
-//                   presets: ['@babel/preset-env']
-//                 }
-//               }
-//             ]
-//           }
-//         }))
-//         .pipe(gulp.dest(path.build.js))
-//         .pipe(browserSync.reload({stream: true}));
-
-// }
-
 function jsDev(cb) {
     return src('./src/js/main.js')
         .pipe(plumber({
@@ -190,6 +148,14 @@ function jsDev(cb) {
                     test: /\.css$/i,
                     use: ["style-loader","css-loader"],
                   },
+                  {
+                                    test: /\.(js)$/,
+                                    exclude: /(node_modules)/,
+                                    loader: 'babel-loader',
+                                    options: {
+                                      presets: ['@babel/preset-env']
+                                    }
+                                  }
                 ],
               }, devtool:'source-map'
           }))

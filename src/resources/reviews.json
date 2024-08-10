@@ -1,0 +1,481 @@
+[
+    {
+        "id": 1,
+        "rating": 4.6,
+        "date": "12/03/2023",
+        "name": "Леонид",
+        "location": "Самара, Россия",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+       
+    },
+    {
+        "id": 2,
+        "rating": 2.6,
+        "date": "01/04/2023",
+        "name": "Александр",
+        "location": "Питер, Россия",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    },
+    {
+        "id": 3,
+        "rating": 25,
+        "date": "18/02/2024",
+        "name": "Мария",
+        "location": "Бангкок, Таиланд",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    },
+    {
+        "id": 4,
+        "rating": 3.7,
+        "date": "18/02/2024",
+        "name": "Олег Петрович",
+        "location": "Ростов, Дон",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    },
+    {
+        "id": 5,
+        "rating": 4.1,
+        "date": "14/06/2024",
+        "name": "Ахмадижон",
+        "location": "Мытищи, Россия",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    },
+    {
+        "id": 6,
+        "rating": 4.1,
+        "date": "02/07/2024",
+        "name": "Илья",
+        "location": "Подольск, Армения",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    },
+    {
+        "id": 7,
+        "rating": 4.3,
+        "date": "12/07/2024",
+        "name": "Алевтина",
+        "location": "Саратов, Россия",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    },
+    {
+        "id": 8,
+        "rating": 4.8,
+        "date": "22/07/2024",
+        "name": "Антон",
+        "location": "Патайя, Таиланд",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    },
+    {
+        "id": 9,
+        "rating": 1.8,
+        "date": "22/07/2024",
+        "name": "Карась Владимирович",
+        "location": "Самара, Тольяти",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    },
+    {
+        "id": 10,
+        "rating": 3.8,
+        "date": "07/08/2023",
+        "name": "Щука Кирилл",
+        "location": "Волга, Кэмпинг",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    },
+
+  {
+        "id": 11,
+        "rating": 4.6,
+        "date": "12/03/2023",
+        "name": "Леонид",
+        "location": "Самара, Россия",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+       
+    },
+    {
+        "id": 12,
+        "rating": 2.6,
+        "date": "01/04/2023",
+        "name": "Александр",
+        "location": "Питер, Россия",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    },
+    {
+        "id": 13,
+        "rating": 25,
+        "date": "18/02/2024",
+        "name": "Мария",
+        "location": "Бангкок, Таиланд",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    },
+    {
+        "id": 14,
+        "rating": 3.7,
+        "date": "18/02/2024",
+        "name": "Олег Петрович",
+        "location": "Ростов, Дон",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    },
+    {
+        "id": 15,
+        "rating": 4.1,
+        "date": "14/06/2024",
+        "name": "Ахмадижон",
+        "location": "Мытищи, Россия",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    },
+    {
+        "id": 16,
+        "rating": 4.1,
+        "date": "02/07/2024",
+        "name": "Илья",
+        "location": "Подольск, Армения",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    },
+    {
+        "id": 17,
+        "rating": 4.3,
+        "date": "12/07/2024",
+        "name": "Алевтина",
+        "location": "Саратов, Россия",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    },
+    {
+        "id": 18,
+        "rating": 4.8,
+        "date": "22/07/2024",
+        "name": "Антон",
+        "location": "Патайя, Таиланд",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    },
+    {
+        "id": 19,
+        "rating": 1.8,
+        "date": "22/07/2024",
+        "name": "Карась Владимирович",
+        "location": "Самара, Тольяти",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    },
+    {
+        "id": 20,
+        "rating": 3.8,
+        "date": "07/08/2023",
+        "name": "Щука Кирилл",
+        "location": "Волга, Кэмпинг",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    },
+
+    {
+        "id": 21,
+        "rating": 4.3,
+        "date": "12/07/2024",
+        "name": "Алевтина",
+        "location": "Саратов, Россия",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    },
+    {
+        "id": 22,
+        "rating": 4.8,
+        "date": "22/07/2024",
+        "name": "Антон",
+        "location": "Патайя, Таиланд",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    },
+    {
+        "id": 23,
+        "rating": 1.8,
+        "date": "22/07/2024",
+        "name": "Карась Владимирович",
+        "location": "Самара, Тольяти",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    },
+    {
+        "id": 24,
+        "rating": 3.8,
+        "date": "07/08/2023",
+        "name": "Щука Кирилл",
+        "location": "Волга, Кэмпинг",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    },
+    
+    {
+        "id": 25,
+        "rating": 4.6,
+        "date": "12/03/2023",
+        "name": "Леонид",
+        "location": "Самара, Россия",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+       
+    },
+    {
+        "id": 26,
+        "rating": 2.6,
+        "date": "01/04/2023",
+        "name": "Александр",
+        "location": "Питер, Россия",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    },
+    {
+        "id": 27,
+        "rating": 25,
+        "date": "18/02/2024",
+        "name": "Мария",
+        "location": "Бангкок, Таиланд",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    },
+    {
+        "id": 28,
+        "rating": 3.7,
+        "date": "18/02/2024",
+        "name": "Олег Петрович",
+        "location": "Ростов, Дон",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    },
+    {
+        "id": 29,
+        "rating": 4.1,
+        "date": "14/06/2024",
+        "name": "Ахмадижон",
+        "location": "Мытищи, Россия",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    },
+    {
+        "id": 30,
+        "rating": 4.1,
+        "date": "02/07/2024",
+        "name": "Илья",
+        "location": "Подольск, Армения",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    },
+    {
+        "id": 31,
+        "rating": 4.3,
+        "date": "12/07/2024",
+        "name": "Алевтина",
+        "location": "Саратов, Россия",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    },
+    {
+        "id": 32,
+        "rating": 4.8,
+        "date": "22/07/2024",
+        "name": "Антон",
+        "location": "Патайя, Таиланд",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    },
+    {
+        "id": 33,
+        "rating": 1.8,
+        "date": "22/07/2024",
+        "name": "Карась Владимирович",
+        "location": "Самара, Тольяти",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    },
+    {
+        "id": 34,
+        "rating": 3.8,
+        "date": "07/08/2023",
+        "name": "Щука Кирилл",
+        "location": "Волга, Кэмпинг",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    },
+
+  {
+        "id": 35,
+        "rating": 4.6,
+        "date": "12/03/2023",
+        "name": "Леонид",
+        "location": "Самара, Россия",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+       
+    },
+    {
+        "id": 36,
+        "rating": 2.6,
+        "date": "01/04/2023",
+        "name": "Александр",
+        "location": "Питер, Россия",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    },
+    {
+        "id": 37,
+        "rating": 25,
+        "date": "18/02/2024",
+        "name": "Мария",
+        "location": "Бангкок, Таиланд",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    },
+    {
+        "id": 38,
+        "rating": 3.7,
+        "date": "18/02/2024",
+        "name": "Олег Петрович",
+        "location": "Ростов, Дон",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    },
+    {
+        "id": 39,
+        "rating": 4.1,
+        "date": "14/06/2024",
+        "name": "Ахмадижон",
+        "location": "Мытищи, Россия",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    },
+    {
+        "id": 40,
+        "rating": 4.1,
+        "date": "02/07/2024",
+        "name": "Илья",
+        "location": "Подольск, Армения",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    },
+    {
+        "id": 41,
+        "rating": 4.3,
+        "date": "12/07/2024",
+        "name": "Алевтина",
+        "location": "Саратов, Россия",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    },
+    {
+        "id": 42,
+        "rating": 4.8,
+        "date": "22/07/2024",
+        "name": "Антон",
+        "location": "Патайя, Таиланд",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    },
+    {
+        "id": 43,
+        "rating": 1.8,
+        "date": "22/07/2024",
+        "name": "Карась Владимирович",
+        "location": "Самара, Тольяти",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    },
+    {
+        "id": 44,
+        "rating": 3.8,
+        "date": "07/08/2023",
+        "name": "Щука Кирилл",
+        "location": "Волга, Кэмпинг",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    },
+
+    {
+        "id": 45,
+        "rating": 4.3,
+        "date": "12/07/2024",
+        "name": "Алевтина",
+        "location": "Саратов, Россия",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    },
+    {
+        "id": 46,
+        "rating": 4.8,
+        "date": "22/07/2024",
+        "name": "Антон",
+        "location": "Патайя, Таиланд",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    },
+    {
+        "id": 47,
+        "rating": 1.8,
+        "date": "22/07/2024",
+        "name": "Карась Владимирович",
+        "location": "Самара, Тольяти",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    },
+    {
+        "id": 48,
+        "rating": 3.8,
+        "date": "07/08/2023",
+        "name": "Щука Кирилл",
+        "location": "Волга, Кэмпинг",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    },
+    {
+        "id": 49,
+        "rating": 1.8,
+        "date": "22/07/2024",
+        "name": "Карась Владимирович",
+        "location": "Самара, Тольяти",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    },
+    {
+        "id": 50,
+        "rating": 3.8,
+        "date": "07/08/2023",
+        "name": "Щука Кирилл",
+        "location": "Волга, Кэмпинг",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    },
+    {
+        "id": 51,
+        "rating": 1.8,
+        "date": "22/07/2024",
+        "name": "Карась Владимирович",
+        "location": "Самара, Тольяти",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    },
+    {
+        "id": 52,
+        "rating": 3.8,
+        "date": "07/08/2023",
+        "name": "Щука Кирилл",
+        "location": "Волга, Кэмпинг",
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
+
+    }
+
+
+
+
+
+
+]

@@ -1,8 +1,7 @@
-import {init as initTabs} from './tabs'
-import {play as playVideo} from './player'
-import {pause as pauseVideo} from './player'
-import {disableScroll,enableScroll} from './aside'
+import { disableScroll, enableScroll } from './aside'
+import { pause as pauseVideo, play as playVideo } from './player'
+import { init as initTabs } from './tabs-media'
 
 export default initTabs
-export {playVideo,pauseVideo,disableScroll,enableScroll}
+export { disableScroll, enableScroll, pauseVideo, playVideo }
 
