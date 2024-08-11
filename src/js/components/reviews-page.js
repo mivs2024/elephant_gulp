@@ -1,4 +1,7 @@
 import{ disableScroll } from ".";
+import {  isChild } from './utils.js'
+import { setMenu } from './menu-shop.js';
+
 
 const perPage = 10
 let count_5 = 0
@@ -8,14 +11,33 @@ let count_2 = 0
 let count_1 = 0
 
 if (window.location.pathname.includes('reviews')) {
+    const currentId = new URL(window.location).searchParams.get('id');
+    const res = await fetch('./resources/products.json')
+    const data = await res.json()
+
+    const resMenu = await fetch('./resources/menu.json')
+    const dataMenu = await resMenu.json();
+
+    const currentProd = data.filter(p => p.id === Number(currentId));
+    const currentCat = currentProd[0].category
+  
+ 
+
     const $reviewsMedia = document.querySelector('.btn-photo');
 
     const $reviews = document.querySelector('.reviews-section__reviews');
     const $pagination = document.querySelector('.reviews-section__pagination');
     const $howMany = document.querySelector('.reviews-section__count');
+    const $title = document.querySelector('.reviews-section__title');
+    const $rating = document.querySelector('.reviews-section__value');
     const currentPage = new URL(window.location).searchParams.get('page') || 1;
 
     const $scoringItems = document.querySelectorAll('.scoring__row');
+
+    $title.textContent = currentProd[0].name
+    $rating.textContent = `${currentProd[0].rating}/5`
+
+    setMenu(currentCat,dataMenu)
 
     setReviews(currentPage,perPage)
 
@@ -249,7 +271,6 @@ if (window.location.pathname.includes('reviews')) {
             }
         })
     }
-    
 
 }
 

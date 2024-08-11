@@ -1,0 +1,155 @@
+[
+    {
+        "id": "1",
+        "name": "Слонам",
+        "slug": "slonam"
+    },
+   
+    {
+        "id": "1.1",
+        "name": "Вода",
+        "slug": "voda"
+    },
+    {
+        "id": "1.1.1",
+        "name": "Вода из озера",
+        "slug": "vodaizozera"
+    },
+    {
+        "id": "1.1.2",
+        "name": "Вода из реки",
+        "slug": "vodaizreki"
+    },
+    {
+        "id": "1.1.3",
+        "name": "Вода из пруда",
+        "slug": "vodaizpruda"
+    },
+    {
+        "id": "1.2",
+        "name": "Еда",
+        "slug": "eda"
+    },
+    {
+        "id": "1.2.1",
+        "name": "Бананы красные",
+        "slug": "bananykrasnye"
+    },
+    {
+        "id": "1.2.2",
+        "name": "Бананы черные",
+        "slug": "bananychernye"
+    },
+    {
+        "id": "1.2.3",
+        "name": "Тростник желтый",
+        "slug": "trostnikzheltyj"
+    },
+    {
+        "id": "1.3",
+        "name": "Тренажеры",
+        "slug": "trenazhery"
+    },
+    {
+        "id": "1.3.1",
+        "name": "Бревна",
+        "slug": "brevna"
+    },
+    {
+        "id": "1.3.2",
+        "name": "Камни",
+        "slug": "kamni"
+    },
+    {
+        "id": "2",
+        "name": "Слонихам",
+        "slug": "sloniham"
+    },
+
+    {
+        "id": "2.1",
+        "name": "Напитки",
+        "slug": "napitki"
+    },
+    {
+        "id": "2.1.1",
+        "name": "Мартини из озера",
+        "slug": "martiniizozera"
+    },
+    {
+        "id": "2.1.2",
+        "name": "Маргарита из пруда",
+        "slug": "margaritaizpruda"
+    },
+    {
+        "id": "2.1.3",
+        "name": "Шампанское речное",
+        "slug": "shampanskoerechnoe"
+    },
+    {
+        "id": "2.2",
+        "name": "Еда не калорийная",
+        "slug": "edanekalorijnaya"
+    },
+    {
+        "id": "2.2.1",
+        "name": "Бананы без калорий",
+        "slug": "bananybezkalorij"
+    },
+    {
+        "id": "2.2.2",
+        "name": "Калории без бананов",
+        "slug": "kaloriibezbananov"
+    },
+    {
+        "id": "2.2.3",
+        "name": "Калории без калорий",
+        "slug": "kaloriibezkalorij"
+    },
+    {
+        "id": "3",
+        "name": "Слонятам",
+        "slug": "slonyatam"
+    },
+    {
+        "id": "3.1",
+        "name": "Сладости",
+        "slug": "sladosti"
+    },
+    {
+        "id": "3.1.1",
+        "name": "Конфеты",
+        "slug": "konfety"
+    },
+    {
+        "id": "3.1.2",
+        "name": "Шоколад",
+        "slug": "shokolad"
+    },
+    {
+        "id": "3.1.3",
+        "name": "Сладкая вата из тростника",
+        "slug": "sladkayavataiztrostnika"
+    },
+    {
+        "id": "3.2",
+        "name": "Игрушки",
+        "slug": "igrushki"
+    },
+    {
+        "id": "3.2.1",
+        "name": "Ракушки",
+        "slug": "rakuski"
+    },
+    {
+        "id": "3.2.2",
+        "name": "Камушки",
+        "slug": "kamushki"
+    },
+    {
+        "id": "3.2.3",
+        "name": "Листики",
+        "slug": "listiki"
+    }
+   
+]

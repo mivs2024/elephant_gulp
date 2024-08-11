@@ -26,24 +26,7 @@
         @include flex-c-sb;
     }
 
-    &__shop{
-        position: absolute;
-        top: 23px;
-        left: 210px;
-        transform: rotate(10deg);
 
-        font-size: 47px;
-        font-weight: 700;
-        color: var(--teal-color);
-        
-        opacity: 0;
-        box-shadow: 2px 2px 10px;
-        
-    }
-
-    &--shop    &__shop{
-            opacity: 1;
-        }
     
 
     &__right {

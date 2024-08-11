@@ -1,13 +1,14 @@
 import sleep from 'sleep-promise';
+import { setMenu } from './menu-shop.js';
+import { isChild } from './utils.js';
 const $inputs = document.querySelectorAll('.checkbox input');
-const $count = document.querySelector('.catalog__count');
 const $catalog = document.querySelector('.catalog__results');
 const $pagination = document.querySelector('.catalog__pagination');
 const $loader = document.querySelector('.loader');
 const $filtersTop = document.querySelector('.catalog__filters-top');
 
 
-import noUiSlider from 'nouislider'
+import noUiSlider from 'nouislider';
 
 const minPrice = 500
 const maxPrice = 20000
@@ -44,15 +45,47 @@ if (rangeSlider) {
 
 if (window.location.pathname.includes('catalog')) {
     const perPage = 8
+    const productsToShow = []
     const brands = new URL(window.location).searchParams.get('brand');
     const minPrice = new URL(window.location).searchParams.get('minPrice');
     const maxPrice = new URL(window.location).searchParams.get('maxPrice');
     const currentPage = new URL(window.location).searchParams.get('page') || 1;
 
+    const cat = new URL(window.location).searchParams.get('cat');
+
+    const resProducts = await fetch('./resources/products.json')
+    const dataProducts = await resProducts.json();
+
+    const resMenu = await fetch('./resources/menu.json')
+    const dataMenu = await resMenu.json();
+    const { id: currentCat, name: currentCatName } = dataMenu.filter(el => el.slug === cat)[0]
+
+    const dataProductsCat = dataProducts.filter(el => isChild(currentCat, el.category))
+
+    dataProductsCat.forEach(c => {
+
+        if (brands) {
+            if (brands?.includes(c.brand)) {
+
+                productsToShow.push(c)
+            }
+        } else {
+            productsToShow.push(c)
+        }
+    });
+
+
+    const $title = document.querySelector('.catalog__title');
+    const $resCount = document.querySelector('.catalog__res-count');
+
+    $title.textContent = `${currentCatName}`
+    $resCount.textContent = `${dataProductsCat.length} товаров`
+
     setBrandsFilters(brands);
     setPriceFilters(minPrice, maxPrice);
     setFiltersTop()
-    setCatalog(brands, currentPage, perPage);
+    setCatalog(currentPage, perPage, productsToShow);
+    setMenu(currentCat, dataMenu)
 }
 
 function setFiltersTop() {
@@ -69,7 +102,7 @@ function setFiltersTop() {
 
                     updateQueryParamsPrice(null, null, true);
                 } else {
-                    updateQueryParamsBrand( $currentName, true);
+                    updateQueryParamsBrand($currentName, true);
 
                 }
 
@@ -95,9 +128,9 @@ function setBrandsFilters(brands) {
 
             i.addEventListener('change', (e) => {
                 if (e.currentTarget.checked)
-                    updateQueryParamsBrand( $currentName);
+                    updateQueryParamsBrand($currentName);
                 else
-                    updateQueryParamsBrand( $currentName, true);
+                    updateQueryParamsBrand($currentName, true);
 
             })
         })
@@ -171,16 +204,16 @@ function generateCard(product) {
     return `
     <article class="card-c">
                     <div class="card-c__label">${product.brand}${product.id}</div>
-                    <a href="product.html" class="card-c__link">
+                    <a  href="/product.html?id=${product.id}" class="card-c__link">
                         <div class="card-c__images">
                             <div class="card-c__image">
-                                <img src="/images/card-products/${product.images[0]}" alt="card-image">
+                                <img src="/images/shop/${product.images[0]}" alt="card-image">
                             </div>
                             <div class="card-c__image">
-                                <img src="/images/card-products/${product.images[1]}" alt="card-image">
+                                <img src="/images/shop/${product.images[1]}" alt="card-image">
                             </div>
                             <div class="card-c__image">
-                                <img src="/images/card-products/${product.images[2]}" alt="card-image">
+                                <img src="/images/shop/${product.images[2]}" alt="card-image">
                             </div>
                         </div>
                         <div class="card-c__price">
@@ -220,41 +253,21 @@ function generateFilterTop(text) {
 
 
 
-async function setCatalog(brands, currentPage, perPage) {
-
-    let prodArrayToShow = []
+async function setCatalog(currentPage, perPage, dataProducts) {
     $loader.classList.add('is-open')
     await sleep(1000);
-    const res = await fetch('./resources/products.json')
-        .then(response => response.json())
-        .then(json => {
-
-            $loader.classList.remove('is-open')
-            json.forEach(c => {
-
-                if (brands) {
-                    if (brands?.includes(c.brand)) {
-
-                        prodArrayToShow.push(c)
-                    }
-                } else {
-                    prodArrayToShow.push(c)
-                }
-            });
-        })
-
-
-    prodArrayToShow.forEach((p, index) => {
+    $loader.classList.remove('is-open')
+    dataProducts.forEach((p, index) => {
         if (index >= (currentPage - 1) * perPage && index < currentPage * perPage)
             $catalog.insertAdjacentHTML('afterbegin', generateCard(p))
 
     })
 
-    $count.textContent = `${prodArrayToShow.length} товаров`
-
-    pagination(currentPage, perPage, prodArrayToShow.length)
+    pagination(currentPage, perPage, dataProducts.length)
 
 }
+
+
 
 function pagination(page, perPage, length) {
     const url = new URL(window.location);

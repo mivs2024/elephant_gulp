@@ -1,17 +1,21 @@
 .hero-reviews {
     position: relative;
+    margin-top: 20px;
  
-
-    &__content {
-        padding-top: 128px;
-        padding-bottom: 100px;
-    }
 
     &__container {
         /* stylelint-disable-next-line at-rule-no-unknown */
         @include flex-column-start;
     }
 
+    &__breadcrumbs{
+        margin-bottom: 30px;
 
+        /* stylelint-disable-next-line selector-class-pattern */
+        & .breadcrumbs__link{
+            font-size: 14px;
+
+        }
+    }
    
 }

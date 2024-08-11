@@ -41,6 +41,7 @@
 @import "./components/slogan";
 @import "./components/dropdown";
 @import "./components/rating";
+@import "./components/menu-shop";
 
 // компоненты страницы index
 @import "./components/header";
@@ -79,7 +80,7 @@
 @import "./components/product-media";
 
 // компоненты страницы catalog
-@import "./components/hero-catalog";
+@import "./components/header-shop";
 @import "./components/catalog-section";
 @import "./components/loader";
 @import "./components/pagination";

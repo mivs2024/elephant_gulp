@@ -195,7 +195,7 @@ function jsProd(cb) {
 function watching() {
     browserSync.init({
         server: {
-            baseDir: "./app"
+            baseDir: "./app",index:"index.html"
         },
     });
     watch(['./src/scss/**/*.scss'], styles);
