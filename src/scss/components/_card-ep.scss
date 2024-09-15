@@ -1,12 +1,85 @@
 .card-ep {
-   overflow: hidden;
-   height: 400px;
+   cursor: pointer;
+   padding: 7px;
+   background-color: var(--color-crystal);
    border-radius: 10px;
 
-   img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+   &__top {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 10px;
+      align-items: start;
+      margin-bottom: 10px;
+
+      @media (min-width: 640px) {
+         flex-direction: row;
+     }
+   }
+
+   &__review {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: flex-start;
 
    }
+
+   &__image {
+      max-width: 100%;
+   //  height:  100px;
+      aspect-ratio: 2/1;
+   
+
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+
+      
+  
+   }
+
+
+   &__location {
+      color: var(--color-lightgray);
+   }
+
+   &__wrapper {
+      display: flex;
+   }
+
+   &__avatar {
+      display: flex;
+      flex: 0 0 auto;
+      align-items: center;
+      justify-content: center;
+
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+
+      background-color: var(--blue-color);
+      border-radius: 50%;
+   }
+
+   &__link {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+   }
+
+ 
+
+   p {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+
+   }
+
+   @media (min-width: 640px) {
+      padding: 20px;
+  }
 }

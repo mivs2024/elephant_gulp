@@ -1,7 +1,9 @@
 .rating{
     position: relative;
     width: fit-content;
+    margin-right: 30px;
     white-space: nowrap;
+
 
   
     &__star-stroke{
@@ -34,8 +36,12 @@
         overflow: hidden;
 
         width: 67%;
-       
-      
+    }
+
+    & .fa-angle-down.font-icon{
+        position: absolute;
+        top: 5px;
+        right: -30px;
     }
 
 }

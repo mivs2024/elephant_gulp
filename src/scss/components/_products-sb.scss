@@ -19,12 +19,17 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
+        display: none;
+
+        @media (min-width: 1024px) {
+          display: block;
+
+        }
        
     }
 
     &__pagination{
         margin-top: 10px;
-        
     }
   
 }

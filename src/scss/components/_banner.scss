@@ -12,15 +12,28 @@
     border-radius: 20px;
     
     
+    &::after{
+        content: "";
+        
+        position: absolute;
+        z-index: -1;
+        inset: 0;
+
+        box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.3);
+
+    }
 
     &__image{
         position: absolute;
+        z-index: -2;
         top: 0;
         left: 0;
 
         width: 100%;
         height: 100%;
     
+
+        
         img{
             width: 100%;
             height: 100%;
@@ -32,12 +45,7 @@
 
     &__text{
         position: relative;
-
-        max-width: 60%;
         padding: 20px;
-
-        font-size: 40px;
-        font-weight: 700;
         color: white;
 
     }

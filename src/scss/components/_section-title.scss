@@ -3,6 +3,10 @@
     gap: 1px;
     align-items: center;
 
+    margin-bottom: 20px;
+    
+    font-size: 22px;
+    font-weight: 600;
     color: var(--color-cadet);
 
     transition: gap 0.3s;
@@ -22,5 +26,9 @@
         span {
             opacity: 1;
         }
+    }
+
+    @media (min-width: 1024px) {
+            font-size: 28px;
     }
 }

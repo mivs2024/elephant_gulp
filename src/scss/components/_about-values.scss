@@ -1,12 +1,14 @@
 .about-values {
-    &__container {
+     &__container {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+
+        @media (min-width: 640px) {
+            grid-template-columns: repeat(2, 1fr);
+
+        }
     }
 
     &__title {
-        font-size: 34px;
-        font-weight: 700;
         color: var(--color-cadet);
     }
 
@@ -22,10 +24,12 @@
     margin-bottom: 20px;
 
     &__icon {
+        min-width: 40px;
         margin-right: 20px;
+
         font-family: FontAwesome, sans-serif;
         font-size: 24px;
-        color: var(--blue-color);
+        color: var(--green-dark-color);
     }
 
     &__wrapper {
@@ -35,15 +39,10 @@
 
     &__label {
         margin-bottom: 10px;
-        font-size: 20px;
-        font-weight: 700;
         color: var(--color-cadet);
     }
 
-    &__text{
-        font-size: 16px;
-        font-weight: 400;
+    &__text {
         color: var(--color-lightgray);
-
     }
 }

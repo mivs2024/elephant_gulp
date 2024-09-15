@@ -9,32 +9,29 @@
         position: relative;
         transform-origin: left top;
         transform: rotate(45deg);
-        
+
         display: flex;
         align-items: center;
         justify-content: center;
-        
+
         width: 60px;
         height: 60px;
 
-        font-size: 18px;
-        font-weight: 700;
         color: white;
 
         background-color: var(--color-cadet);
         border-top-left-radius: 50%;
         border-top-right-radius: 50%;
         border-bottom-left-radius: 50%;
-    
 
-        span{
+        span {
             transform: rotate(-45deg);
         }
 
         /* stylelint-disable-next-line order/order */
         &::after {
             content: "";
-            
+
             position: absolute;
             top: 30px;
             left: 30px;
@@ -49,75 +46,101 @@
         }
     }
 
-    &__image{
+    &__image {
         position: relative;
+        height: 300px;
 
-        img{
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+
             width: 100%;
-            max-height: 700px;
+            height: 100%;
+
             object-fit: cover;
         }
-       
 
+        @media (min-width: 640px) {
+            height: 500px;
+        }
+
+        @media (min-width: 1024px) {
+            height: 500px;
+        }
+
+        @media (min-width: 1300px) {
+            height: 700px;
+        }
     }
 
-    &__content{
+    &__content {
         position: relative;
-        
         display: grid;
-        grid-template-columns: 60% 40%;
-        
         margin-bottom: 50px;
-
         background-color: var(--card-bg-color);
-        
+
+        @media (min-width: 1024px) {
+            grid-template-columns: 60% 40%;
+        }
     }
 
-    &__info{
+    &__info {
         position: relative;
-
-        margin-top: -50px;
-        padding-top: 50px;
-        padding-right: 50px;
-        padding-left: 20px;
-
+        padding-top: 20px;
         background-color: var(--card-bg-color);
 
-       
+        @media (min-width: 1024px) {
+            margin-top: -50px;
+            padding-top: 50px;
+            padding-right: 50px;
+            padding-left: 20px;
+        }
     }
 
-    &__title{
+    &__title {
         margin-bottom: 20px;
-        font-size: 24px;
-        font-weight: 700;
     }
 
-    &__text{
-        font-size: 16px;
-        line-height: 1.5;
-    }
-
-    &__right{
+    &__right {
         display: grid;
-        grid-auto-rows: 100px;
-        grid-template-columns: repeat(12,1fr);
+        grid-template-columns: repeat(12, 1fr);
         gap: 10px;
-
         padding-top: 20px;
 
-        img{
+        img {
             cursor: pointer;
 
-            grid-column: 4 span;
-            
+            grid-column: 6 span;
+
+            aspect-ratio: 3/2;
             width: 100%;
-            height: 100px;
-            
+
             object-fit: cover;
+        }
+
+        @media (max-width: 1024px) {
+            display: none;
         }
     }
 
-    &__meta-distance{
+    &__right-photoswipe{
+        display: none;
+        padding-top: 20px;
+
+        img {
+            cursor: pointer;
+            aspect-ratio: 2/1;
+            width: 30%;
+            object-fit: cover;
+        }
+
+        @media (max-width: 1024px) {
+            display: block;
+        }
+    }
+
+    &__meta-distance {
         position: relative;
 
         display: grid;
@@ -128,14 +151,12 @@
 
         color: var(--color-cadet);
 
-        span{
+        span {
             margin-left: 20px;
         }
-
-
     }
 
-    &__wrapper{
+    &__wrapper {
         position: relative;
         display: flex;
         align-items: center;
@@ -155,10 +176,10 @@
             border-left: 2px dashed var(--color-cadet);
         }
     }
-    
-    &__meta-by-car{
+
+    &__meta-by-car {
         position: relative;
-        
+
         display: grid;
         grid-template-columns: 60% 40%;
 
@@ -167,12 +188,12 @@
 
         color: var(--color-cadet);
 
-        span{
+        span {
             margin-left: 20px;
         }
     }
-    
-    &__meta-bottom{
+
+    &__meta-bottom {
         position: relative;
 
         display: grid;
@@ -184,9 +205,9 @@
         background-color: var(--card-bg-color);
     }
 
-    &__line{
+    &__line {
         position: relative;
-        
+
         &::after {
             content: "";
 
@@ -201,5 +222,4 @@
             border-left: 2px dashed var(--color-cadet);
         }
     }
-
 }

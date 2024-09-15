@@ -34,18 +34,18 @@ if (window.location.pathname.includes('product')) {
                                 <span class="rating__star-fill"></span>
                             </div>
                         </div>
-                        <div class="review__data">${p.date}</div>
+                        <div class="review__data text-sm">${p.date}</div>
                     </div>
                     <div class="review__right">
                         <div class="review__header">
-                            <div class="review__avatar">Л</div>
+                            <div class="review__avatar text">Л</div>
                             <div class="review__user">
-                                <div class="review__name">${p.name}</div>
-                                <p class="review__location">${p.location}</p>
+                                <div class="review__name text-600">${p.name}</div>
+                                <p class="review__location text-sm">${p.location}</p>
     
                             </div>
                         </div>
-                        <p class="review__text">
+                        <p class="review__text text">
                         ${p.text}
                         </p>
                     </div>

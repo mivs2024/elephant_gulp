@@ -28,11 +28,7 @@
         stroke: currentcolor;
     }
 
-    &__text {
-        font-size: 24px;
-        font-weight: 700;
-    }
-
+ 
     /* stylelint-disable-next-line order/order */
     &::before {
         content: "";

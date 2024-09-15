@@ -3,8 +3,13 @@
     color: white;
     background-color: var(--dark-color);
 
-    &__inner {
+    &__top {
         display: flex;
+        flex-direction: column;
+      
+        @media (min-width: 640px) {
+            flex-direction: row;
+        }
     }
 
     &__info {
@@ -12,10 +17,7 @@
         @include flex-column-sb;
     }
 
-    &__socials{
-        color: white;
-    }
-
+  
     &__logo {
         margin-bottom: 20px;
     }
@@ -29,10 +31,19 @@
     }
 
     &__nav {
-        margin-left: 100px;
+        display: flex;
+        column-gap: 20px;
+      
+
+        @media (min-width: 640px) {
+            column-gap: 50px;
+            margin-left: 50px;
+        }
+
+     
     }
 
-    &__shop{
+    &__services{
         margin-left: 50px;
     }
 
@@ -40,11 +51,8 @@
         margin-left: 50px;
     }
 
-    &__title{
-        margin-bottom: 15px;
-        font-size: 18px;
-        font-weight: 500;
-    }
+    
+
 
     &__list{
         /* stylelint-disable-next-line at-rule-no-unknown */
@@ -56,11 +64,14 @@
 
     &__link{
         padding: 5px 0;
-        font-size: 16px;
         transition: color 0.3s;
 
         &:hover{
             color: var(--hover-color);
+        }
+
+        &--all{
+            color: var(--blue-color);
         }
     }
 }

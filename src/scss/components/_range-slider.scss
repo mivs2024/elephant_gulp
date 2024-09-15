@@ -29,19 +29,19 @@
 
     /* stylelint-disable-next-line selector-class-pattern */
     .noUi-horizontal {
-        height: 6px;
+        height: 3px;
         background-color: var(--focus-color);
     }
 
     /* stylelint-disable-next-line selector-class-pattern */
     .noUi-horizontal .noUi-handle {
-        top: -10px;
+        top: -7px;
         right: -17px;
     
-        width: 30px;
-        height: 30px;
+        width: 20px;
+        height: 20px;
     
-        border: 8px solid var(--green-dark-color);
+        border: 3px solid var(--green-dark-color);
         border-radius: 100%;
         box-shadow: none;
         
@@ -63,6 +63,7 @@
         /* stylelint-disable-next-line selector-class-pattern */
         .noUi-horizontal .noUi-tooltip{
             bottom: 180%;
+            font-size: 12px;
             background: transparent;
             border: none;
         }

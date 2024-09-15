@@ -12,10 +12,9 @@ const servicesSlider = document.querySelector('.services-slider')
 if(servicesSlider){
 
     const serv = new Swiper(servicesSlider, {
-        spaceBetween: 20,
-    
-        slidesPerView: 4,
-        loop: true,
+        spaceBetween:20,
+        slidesPerView: "auto",
+        loop:"true",
         // configure Swiper to use modules
         modules: [Navigation, Pagination],
         pagination: {
@@ -39,93 +38,23 @@ if(servicesSlider){
     });
 }
 
-const  popularSlider = document.querySelector('.popular-products-slider')
-
-if(popularSlider){
-
-    const popularProducts = new Swiper(popularSlider, {
-        spaceBetween: 20,
-        slidesPerView: 4,
-        loop: true,
-        
-        // configure Swiper to use modules
-        modules: [Navigation, Pagination],
-        pagination: {
-            el: '.slider-pagination.popular-products__pagination',
-            bulletClass: 'slider-pagination__bullet',
-            bulletActiveClass: 'slider-pagination__bullet--active',
-            clickable: true,
-            //     renderBullet: function (index, className) {
-            //         return `
-            //   <div class="services__bullet ${className}">
-    
-            //   </div>`
-            //     }
-        },
-    
-        // Navigation arrows
-        navigation: {
-            nextEl: '.popular-products__next',
-            prevEl: '.popular-products__prev',
-        },
-    });
-}
 
 const  reviewsSlider = document.querySelector('.reviews-media__slider')
-const  reviewsSlider2 = document.querySelector('.reviews-media__slider2')
 
-if(reviewsSlider&&reviewsSlider2){
-
-    
-
-    const swiper2 = new Swiper(reviewsSlider2, {
-        spaceBetween: 10,
-        slidesPerView: 8,
-        freeMode: true,
-     
-        watchSlidesProgress: true,
-    });
-
-    const swiper =  new Swiper(reviewsSlider, {
+if(reviewsSlider){
+   const swiper =  new Swiper(reviewsSlider, {
         spaceBetween: 10,
         // configure Swiper to use modules
-        modules: [Navigation, Thumbs],
+        modules: [Navigation],
         // Navigation arrows
         navigation: {
             nextEl: '.reviews-media__next',
             prevEl: '.reviews-media__prev',
         },
-        thumbs:{
-            swiper:swiper2
-        }
+      
     });
 }
 
-const  productsSbSlider = document.querySelector('.products-sb-slider')
-
-if(productsSbSlider){
-
-    const productsSb = new Swiper(productsSbSlider, {
-        spaceBetween: 20,
-        slidesPerView: 5,
-        loop: true,
-        
-        // configure Swiper to use modules
-        modules: [Navigation, Pagination],
-        pagination: {
-            el: '.slider-pagination.products-sb__pagination',
-            bulletClass: 'slider-pagination__bullet',
-            bulletActiveClass: 'slider-pagination__bullet--active',
-          
-        },
-    
-        // Navigation arrows
-        navigation: {
-            nextEl: '.products-sb__next',
-            prevEl: '.products-sb__prev',
-        },
-    });
-}
 
 const  eventsSlider = document.querySelector('.events-slider')
 
@@ -167,8 +96,7 @@ if(eventsNextSlider){
 
     const events = new Swiper(eventsNextSlider, {
     
-        slidesPerView: 2,
-        spaceBetween: 30,
+        slidesPerView: 1,
         loop: true,
 
         // configure Swiper to use modules
@@ -181,6 +109,12 @@ if(eventsNextSlider){
             nextEl: '.events-next__next',
             prevEl: '.events-next__prev',
         },
+        breakpoints:{
+            1024: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+        }
     });
     
     if (events) {
@@ -201,8 +135,8 @@ const  workersSlider = document.querySelector('.workers-slider')
 if(workersSlider){
 
     const workers = new Swiper(workersSlider, {
-        // spaceBetween: 20,
-        slidesPerView: 3,
+        //  spaceBetween: 150,
+        slidesPerView: "auto",
         speed:500,
         loop: true,
         centeredSlides: true,

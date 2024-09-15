@@ -4,11 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <link rel="icon" type="image/png" href="/elephant/images/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#111111">
   <title>О нас</title>
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="/elephant/css/main.css">
 </head>
 
 <body id="page">
@@ -16,8 +16,11 @@
     @include('partials/header.html')
     <main>
        @include('partials/hero-about.html')
+       @include('partials/services-banner.html')
        @include('partials/about-values.html')
-       @include('partials/about-workers.html')
+       @include('partials/workers.html')
+     
+       <!-- @include('partials/about-workers.html') -->
      
       @include('partials/connect.html')
       @include('partials/footer.html')

@@ -1,0 +1,75 @@
+.burger-mobile {
+    --burger-width: 20px;
+    --burger-height: 15px;
+    --burger-line-height: 2px;
+  
+    position: absolute;
+    z-index: 1000;
+    top: 40px;
+    left: 15px;
+
+    width: var(--burger-width);
+    height: var(--burger-height);
+    padding: 0;
+    
+    border: none;
+    color: #000;
+    background-color: transparent;
+    cursor: pointer;
+  
+    @media (min-width: 1024px) {
+        display: none;
+    }
+  }
+  
+  .burger-mobile::before,
+  .burger-mobile::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: var(--burger-line-height);
+    background-color: currentColor;
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+  }
+  
+  .burger-mobile::before {
+    top: 0;
+  }
+  
+  .burger-mobile::after {
+    top: calc(100% - var(--burger-line-height));
+  }
+  
+  .burger-mobile__line {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: var(--burger-line-height);
+    background-color: currentColor;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .burger-mobile--active::before {
+    top: 50%;
+    transform: rotate(45deg);
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+  }
+  
+  .burger-mobile--active::after {
+    top: 50%;
+    transform: rotate(-45deg);
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+  }
+  
+  .burger-mobile--active .burger__line {
+    transform: scale(0);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .burger-mobile:focus::after {
+    opacity: 1;
+  }
+  

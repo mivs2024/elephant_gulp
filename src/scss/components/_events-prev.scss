@@ -1,7 +1,4 @@
 .events-prev {
-    margin-top: 200px;
-    margin-bottom: 100px;
-    
     &__container{
         position: relative;
         padding-top: 150px;
@@ -12,24 +9,34 @@
         position: relative;
         display: grid;
         grid-template-columns: repeat(12, 1fr);
-        padding: 0 30px;
+
+        @media (min-width: 1024px) {
+            padding: 0 30px;
+        }
 
     }
 
     &__title {
-        font-size: 30px;
-        font-weight: 600;
         color: var(--color-cadet);
     }
 
     &__left {
-        grid-column: 4 span;
+        grid-column: 12 span;
         padding: 20px;
+
+        @media (min-width: 1024px) {
+            grid-column: 4 span;
+        }
     }
 
     &__slider {
         position: relative;
-        grid-column: 8 span;
+        grid-column: 12 span;
+
+       
+        @media (min-width: 1024px) {
+            grid-column: 8 span;
+        }
     }
 
     &__prev {
@@ -46,8 +53,14 @@
         z-index: 2;
         top: -50px;
 
+        display: none;
+
         color:aqua;
 
         border: none;
+
+        @media (min-width: 640px) {
+            display: block;
+        }
     }
 }

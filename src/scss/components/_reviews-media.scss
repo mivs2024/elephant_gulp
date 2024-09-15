@@ -9,51 +9,17 @@
    
     &__top {
         position: relative;
-
         display: flex;
         justify-content: center;
-
-        width: 100%;
-        height: 70%;
         padding-top: 30px;
 
     }
 
     &__slider {
         max-width: 500px;
-        height: 100%;
-
-    }
-
-    &__bottom{
-        width: 100%;
-        height: 30%;
-        padding-top: 10px;
-
-    }
-    
-    &__slider2 &__slide{
-        border: 3px solid transparent;
-    }
-    
-    &__slider2 {
-        width: 100%;
-        height: 100%;
-
-        & .swiper-slide-thumb-active{
-            border: 3px solid red;
-        }
     }
 
 
-
-    &__slide{
-        img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
 
     &__prev {
         left: 100px;

@@ -9,6 +9,11 @@
 
 
 @import "./components/btn";
+@import "./components/burger-mobile";
+@import "./components/auth";
+@import "./components/rating-graph";
+@import "./components/popper-rating";
+@import "./components/popper-user";
 @import "./components/checkbox";
 @import "./components/checkbox";
 @import "./components/range-slider";
@@ -24,8 +29,6 @@
 @import "./components/card-ss";
 @import "./components/socials";
 @import "./components/form-connect";
-@import "./components/subtitle";
-@import "./components/title";
 @import "./components/section-title";
 @import "./components/top-image-bg";
 @import "./components/card-services";
@@ -88,7 +91,6 @@
 // компоненты страницы about
 @import "./components/hero-about";
 @import "./components/about-values";
-@import "./components/about-workers";
 
 // компоненты страницы about
 @import "./components/hero-contacts";
@@ -99,5 +101,7 @@
 @import "./components/hero-reviews";
 @import "./components/reviews-section";
 @import "./components/reviews-media";
+
+@import "./media";
 
 

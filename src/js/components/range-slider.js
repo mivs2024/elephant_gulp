@@ -16,7 +16,6 @@ if(rangeSlider){
     ],
   })
   slider.on('update', function (values, handle) {
-   console.log(values);
-   console.log(handle);
+ 
   });
 }

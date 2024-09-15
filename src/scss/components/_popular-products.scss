@@ -1,14 +1,11 @@
-.popular-products{
+.popular-products {
     margin-bottom: 100px;
 
-    &__slider{
+    &__slider {
         position: relative;
     }
 
-    &__title{
-        margin-bottom: 40px;
-    }
-
+  
     &__container-btn {
         text-align: center;
     }
@@ -17,25 +14,29 @@
         display: inline-flex !important;
         width: 200px !important;
     }
- 
-    &__prev{
+
+    &__prev {
         left: -50px;
     }
 
-    &__next{
+    &__next {
         right: -50px;
     }
 
-    &__prev, &__next{
+    &__prev,
+    &__next {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-    }
-    
+        display: none;
 
-    &__pagination{
+        @media (min-width: 1024px) {
+            display: block;
+        }
+    }
+
+    &__pagination {
         margin-top: 10px;
         margin-bottom: 30px;
     }
-  
 }

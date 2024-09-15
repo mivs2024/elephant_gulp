@@ -9,7 +9,9 @@ if(selects){
         shouldSort: false,
         position: 'bottom',
         searchEnabled: false,
-        itemSelectText: ''
+        itemSelectText: '',
+        
+        
       });
     });
 }

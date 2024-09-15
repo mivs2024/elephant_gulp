@@ -1,0 +1,51 @@
+.rating-graph {
+    width: 300px;
+
+    &__header {
+        margin-bottom: 10px;
+    }
+
+    &__scoring-row {
+        display: flex;
+        align-items: stretch;
+        margin-bottom: 20px;
+    }
+
+    &__scoring-value {
+        margin-right: 10px;
+        color: var(--color-lightgray);
+    }
+
+    &__scoring-progress {
+        position: relative;
+
+        overflow: hidden;
+        flex: 1 1 auto;
+
+        margin-right: 10px;
+
+        background-color: var(--color-lightgray);
+        border-radius: 10px;
+    }
+
+    &__scoring-fill {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        overflow: hidden;
+
+        height: 100%;
+        width: 10px;
+
+        background-color: red;
+        border-radius: 10px;
+
+        transition: width 1s ease;
+    }
+
+    &__scoring-count {
+        font-size: 14px;
+        color: var(--color-lightgray);
+    }
+}

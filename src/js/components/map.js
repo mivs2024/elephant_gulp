@@ -1,3 +1,4 @@
+console.log('map');
 
 window.map = null;
 
@@ -37,7 +38,7 @@ async function main() {
     const contentPin = document.createElement('div');
     contentPin.classList.add("contacts-map__pin") ;
     contentPin.classList.add("pin") ;
-    contentPin.innerHTML = '<img src="/images/elephant.svg" class="pin__img"> ';
+    contentPin.innerHTML = '<img src="/elephant/images/elephant.svg" class="pin__img"> ';
 
     /* We declare the function for rendering ordinary markers, we will submit it to the clusterer settings.
     Note that the function must return any Entity element. In the example, this is ymaps3.YMapMarker. */
@@ -149,6 +150,9 @@ async function main() {
             map.update({location: {...new_location}});
         }
     })
+
+ 
+   
 
     
 }

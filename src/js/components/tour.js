@@ -1,4 +1,7 @@
+import PhotoSwipeLightbox from 'photoswipe/lightbox';
+import 'photoswipe/style.css';
 import { disableScroll } from ".";
+
 
 
 if (window.location.pathname.includes('tour')) {
@@ -7,6 +10,7 @@ if (window.location.pathname.includes('tour')) {
     const $breadcrumbName = document.querySelector('.tour-name');
     const $blockImages = document.querySelectorAll('.block__image img');
     const $showMedia = document.querySelectorAll('.block__right img');
+    const $showMediaPhotoSwipe = document.querySelectorAll('.block__right-photoswipe img');
 
 
     const res = await fetch('./resources/tours.json')
@@ -17,7 +21,7 @@ if (window.location.pathname.includes('tour')) {
     $breadcrumbName.textContent = currentTour[0].name
 
     $blockImages.forEach((b, index) => {
-        b.setAttribute('src', `/images/tours/${currentTour[0].images[index]}`)
+        b.setAttribute('src', `/elephant/images/tours/${currentTour[0].images[index]}`)
     })
 
 
@@ -35,5 +39,38 @@ if (window.location.pathname.includes('tour')) {
             }
         })
     })
+
+
+
+
+    const lightbox = new PhotoSwipeLightbox({
+        showHideAnimationType: 'none',
+        pswpModule: () => import('photoswipe'),
+    });
+
+    
+    lightbox.addFilter('numItems', (numItems) => {
+        return currentTour[0].images.length;
+      });
+
+
+    lightbox.addFilter('itemData', (itemData, index) => {
+        return {
+            src: `/elephant/images/tours/${currentTour[0].images[index]}`,
+             width: 500,
+             height: 500
+        };;
+    });
+    lightbox.init();
+
+
+
+    $showMediaPhotoSwipe.forEach(b => {
+
+        b.addEventListener('click', (e) => {
+            lightbox.loadAndOpen(0);
+        })
+    })
+
 
 }

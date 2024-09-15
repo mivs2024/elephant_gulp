@@ -138,18 +138,18 @@
     },
     {
         "id": "3.2.1",
-        "name": "Ракушки",
-        "slug": "rakuski"
+        "name": "Шарики",
+        "slug": "shariki"
     },
     {
         "id": "3.2.2",
-        "name": "Камушки",
-        "slug": "kamushki"
+        "name": "Машинки",
+        "slug": "mashinki"
     },
     {
         "id": "3.2.3",
-        "name": "Листики",
-        "slug": "listiki"
+        "name": "Самолетики",
+        "slug": "samoliotiky"
     }
    
 ]

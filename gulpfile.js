@@ -12,6 +12,7 @@ const del = require('del');
 const sourcemaps = require('gulp-sourcemaps');
 var notify = require("gulp-notify");
 var plumber = require('gulp-plumber');
+const destDir='./app/elephant'
 
 
 function htmlInclude() {
@@ -20,7 +21,7 @@ function htmlInclude() {
             prefix: '@',
             basepath: '@file'
         }))
-        .pipe(dest('./app'))
+        .pipe(dest(destDir))
         .pipe(browserSync.stream());
 }
 
@@ -28,13 +29,13 @@ function htmlInclude() {
 
 function fonts() {
     return src('./src/fonts/*.woff2',{ encoding: false })
-        .pipe(dest('./app/fonts'))
+        .pipe(dest(`${destDir}/fonts`))
 }
 
 
 const resources = () => {
     return src('./src/resources/*.*', { encoding: false })
-      .pipe(dest('./app/resources'))
+      .pipe(dest(`${destDir}/resources`))
   }
 
 
@@ -42,23 +43,23 @@ const resources = () => {
 const images = () => {
     return src([`./src/images/**/*.{jpg,jpeg,png,svg,webp,avif,mp4,gif}`], { encoding: false })
    
-      .pipe(dest('./app/images'))
+      .pipe(dest(`${destDir}/images`))
   };
 
 
 
-function svgSprites() {
-    return src('./src/images/**.svg')
-        .pipe(svgSprite({
-            mode: {
-                stack: {
-                    sprite: '../sprite.svg'
+// function svgSprites() {
+//     return src('./src/images/**.svg')
+//         .pipe(svgSprite({
+//             mode: {
+//                 stack: {
+//                     sprite: '../sprite.svg'
 
-                }
-            }
-        }))
-        .pipe(dest('./app/images'))
-}
+//                 }
+//             }
+//         }))
+//         .pipe(dest('./app/images'))
+// }
 
 const scripts = () => {
 
@@ -71,7 +72,7 @@ const scripts = () => {
         .pipe(concat('main.js'))
         .pipe(uglify().on("error", notify.onError()))
         .pipe(sourcemaps.write('.'))
-        .pipe(dest('./app/js'))
+        .pipe(dest(`${destDir}/js`))
         .pipe(browserSync.stream());
 }
 
@@ -94,7 +95,7 @@ function styles() {
             grid: true
         }))
         .pipe(sourcemaps.write('.'))
-        .pipe(dest('./app/css'), { sourcemaps: '.' })
+        .pipe(dest(`${destDir}/css`), { sourcemaps: '.' })
         .pipe(browserSync.stream());
 }
 
@@ -115,7 +116,7 @@ function stylesProd() {
             overrideBrowserslist: ['last 10 version'],
             grid: true
         }))
-        .pipe(dest('./app/css'))
+        .pipe(dest(`${destDir}/css`))
         .pipe(browserSync.stream());
 }
 
@@ -159,7 +160,7 @@ function jsDev(cb) {
                 ],
               }, devtool:'source-map'
           }))
-        .pipe(dest('./app/js'))
+        .pipe(dest(`${destDir}/js`))
         .pipe(browserSync.reload({stream: true}));
 }
 
@@ -188,14 +189,15 @@ function jsProd(cb) {
                 ],
               }
           }))
-        .pipe(dest('./app/js'))
+        .pipe(dest(`${destDir}/js`))
         .pipe(browserSync.reload({stream: true}));
 }
 
 function watching() {
     browserSync.init({
         server: {
-            baseDir: "./app",index:"index.html"
+         
+            baseDir: "./app",index:"elephant/index.html"
         },
     });
     watch(['./src/scss/**/*.scss'], styles);
@@ -206,7 +208,7 @@ function watching() {
     watch('./src/images/**/*.{jpg,jpeg,png,webp,avif,mp4,gif}', images);
     watch('./src/fonts/*.woff2', fonts);
     watch('./src/resources/**', resources);
-    watch(['app/*.html']).on('change', browserSync.reload);
+    watch(['app/elephant/*.html']).on('change', browserSync.reload);
 }
 
 exports.styles = styles
@@ -214,7 +216,7 @@ exports.scripts = scripts
 exports.watching = watching
 
 exports.images = images
-exports.svgSprites = svgSprites
+// exports.svgSprites = svgSprites
 exports.fonts = fonts
 exports.clean = clean
 exports.htmlInclude = htmlInclude

@@ -8,6 +8,8 @@
         width: 40px;
         height: 40px;
 
+        font-family: FontAwesome, sans-serif;
+        color: var(--color-cadet);
 
         background-color:transparent;
         border: 3px solid transparent;
@@ -15,16 +17,9 @@
 
         transition: 0.3s;
 
-        svg {
-            color: var(--color-cadet);
-        }
-
         &:hover {
+            color: #fff;
             background-color: var(--teal-color);
-
-            svg{
-                color: #fff;
-            }
         }
     }
 }

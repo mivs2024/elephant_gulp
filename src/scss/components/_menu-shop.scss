@@ -1,8 +1,10 @@
 .menu-shop {
     display: flex;
-  
-    
-    &__submenu{
+    flex-direction: row;
+    align-items: start;
+    background-color: #fff;
+
+    &__submenu {
         position: absolute;
         z-index: 15;
         top: 100%;
@@ -10,72 +12,161 @@
         left: 0;
 
         display: none;
-        
+
         width: 100%;
         padding-top: 20px 10px;
-        
+
         background-color: #fff;
 
-    }
+        @media (max-width: 1023px) {
+            position: static;
 
-    &__item{
-        padding-right: 30px;
-       
-  
-    }
+            overflow: hidden;
+            display: block;
 
-    &__link {
-        display: block;
-        
-        padding-top: 10px;
-        padding-bottom: 10px;
-        
-        color: var(--dark-color);
-
-        border-bottom: 2px solid transparent;
-
-        transition: all 0.3s;
-
-    }
+            max-height: 0;
 
 
-    &__item:hover &__submenu{
-        display: block;
-    }
+            transition: all 0.3s ease-in-out;
 
-
-    &__item:hover &__link{
-        color: var(--green-dark-color);
-        border-bottom: 2px solid var(--color-cadet);
-
-    }
-
-    &__item.is-active &__link{
-        color: var(--color-cadet);
-        border-bottom: 2px solid var(--color-cadet);
-    }
-
-
-    &--bottom{
-        color: var(--color-cadet);
-    }
- 
-}
-
-.submenu{
-    padding-top: 20px;
-    padding-right: calc(50vw - 1390px / 2 - 20px);
-    padding-left: calc(50vw - 1390px / 2 - 20px);
-
-    &__item{
-        margin-bottom: 20px;
+            .open &{
+                max-height: 300px;
+            }
+        }
     }
 
     &__link{
-        transition: color 0.3s;
+        display: block;
+
+        padding-top: 10px;
+        padding-bottom: 10px;
+        
+        font-weight: 600 !important;
+        
+        border-bottom: 2px solid transparent;
+
+
+        @media (max-width: 1023px) {
+            display: none;
+        }
+    }
+
+    &__item {
+        padding-right: 30px;
+    }
+
+    &__item-mobile {
+        cursor: pointer;
+
+        display: flex;
+        justify-content: space-between;
+        
+        padding: 10px 0;
+
+        border-top: 1px solid var(--bg-color);
+        border-bottom: 1px solid var(--bg-color);
+
+        @media (min-width: 1024px) {
+            display: none;
+        }
+    }
+
+
+    
+    &__mobile{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+
+        @media (min-width: 1024px) {
+            display: none;
+        }
+    }
+
+
+    &__mobile-link{
+        color: var(--color-lightgray);
+        border-bottom: 2px solid transparent;
+
+        &.is-active{
+            border-bottom: 2px solid var(--blue-color);
+        }
 
         &:hover{
+            border-bottom: 2px solid var(--blue-color);
+        }
+    }
+
+    @media (max-width: 1023px) {
+        position: fixed;
+        z-index: 1001;
+        top: 0;
+        left: -400px;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        min-width: 310px;
+        min-height: 100vh;
+        padding: 20px;
+        padding-top: 40px;
+
+        transition: left 0.3s;
+
+        .mobile-show &{
+            left:0;
+        }
+    }
+
+
+    @media (min-width: 1024px) {
+        &__item:hover &__submenu {
+            display: block;
+        }
+    
+        &__item:hover &__link {
+            color: var(--green-dark-color);
+            border-bottom: 2px solid var(--color-cadet);
+        }
+    }
+
+
+}
+
+.mobile-close{
+    position: absolute;
+    top: -43px;
+    right: -11px;
+
+    font-size: 29px;
+    font-weight: 400;
+}
+
+.arrow-down{
+    font-weight: 700;
+}
+
+.submenu {
+    padding-left:  20px;
+
+    &__item {
+        padding: 10px 0;
+    }
+
+    &__link {
+        font-weight: 600 !important;
+        transition: color 0.3s;
+
+        &:hover {
             color: var(--green-dark-color);
         }
+    }
+
+    @media (min-width: 1024px) {
+        padding-top: 20px;
+        padding-right: max(calc(50vw - 1420px / 2),20px);
+        padding-left:  max(calc(50vw - 1420px / 2),20px);
+    
     }
 }

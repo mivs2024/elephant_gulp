@@ -3,12 +3,16 @@ import { setMenu } from './menu-shop.js';
 import { isChild } from './utils.js';
 const $inputs = document.querySelectorAll('.checkbox input');
 const $catalog = document.querySelector('.catalog__results');
-const $pagination = document.querySelector('.catalog__pagination');
 const $loader = document.querySelector('.loader');
 const $filtersTop = document.querySelector('.catalog__filters-top');
+const $filtersItemToggle = document.querySelectorAll('.filter-item__title');
+const $filtersMobileBrand = document.querySelector('.filter-item__mobile--brand');
+const $filtersMobilePrice = document.querySelector('.filter-item__mobile--price');
 
 
 import noUiSlider from 'nouislider';
+import { perPage } from './constants.js';
+import { pagination } from './pagination.js';
 
 const minPrice = 500
 const maxPrice = 20000
@@ -43,8 +47,9 @@ if (rangeSlider) {
     });
 }
 
+
 if (window.location.pathname.includes('catalog')) {
-    const perPage = 8
+      
     const productsToShow = []
     const brands = new URL(window.location).searchParams.get('brand');
     const minPrice = new URL(window.location).searchParams.get('minPrice');
@@ -84,8 +89,43 @@ if (window.location.pathname.includes('catalog')) {
     setBrandsFilters(brands);
     setPriceFilters(minPrice, maxPrice);
     setFiltersTop()
-    setCatalog(currentPage, perPage, productsToShow);
+    setCatalog(currentPage,  productsToShow);
     setMenu(currentCat, dataMenu)
+
+    const $filtersToggle = document.querySelector('.catalog__filters-toggle');
+    const $filtersClose = document.querySelector('.catalog__filters-mobile-close');
+    const $filtersItemClose = document.querySelectorAll('.filter-item__mobile-close');
+    const $filters = document.querySelector('.catalog__filters');
+
+
+    $filtersToggle.onclick = () => {
+        $filters.classList.toggle('mobile-show')
+    }
+
+
+    $filtersClose.onclick = () => {
+        $filters.classList.toggle('mobile-show')
+    }
+
+
+    $filtersItemToggle.forEach(el => {
+
+        el.onclick = () => {
+            el.closest('.filter-item').classList.toggle('open')
+        }
+
+    })
+
+
+    $filtersItemClose.forEach(el => {
+
+        el.onclick = () => {
+            el.closest('.filter-item').classList.toggle('open')
+        }
+
+    })
+
+
 }
 
 function setFiltersTop() {
@@ -122,6 +162,7 @@ function setBrandsFilters(brands) {
             if (brands?.includes($currentName)) {
                 i.checked = true
                 $filtersTop.insertAdjacentHTML('afterbegin', generateFilterTop($currentName))
+                $filtersMobileBrand.insertAdjacentHTML('afterbegin', `<span class='text-sm'>${$currentName}</span>`)
 
 
             }
@@ -144,6 +185,9 @@ function setPriceFilters(minPrice_, maxPrice_) {
 
     if (minPrice_ || maxPrice_) {
         $filtersTop.insertAdjacentHTML('afterbegin', generateFilterTop(`от ₽ ${minPrice_ || minPriceStart} до ₽ ${maxPrice_ || maxPriceStart}`))
+
+        $filtersMobilePrice.insertAdjacentHTML('afterbegin', `<span class='text-sm'>${minPrice_ || minPriceStart} - ${maxPrice_ || maxPriceStart}</span>`)
+
     }
 
     rangeSlider.noUiSlider.set([minPrice_, maxPrice_]);
@@ -204,16 +248,16 @@ function generateCard(product) {
     return `
     <article class="card-c">
                     <div class="card-c__label">${product.brand}${product.id}</div>
-                    <a  href="/product.html?id=${product.id}" class="card-c__link">
+                    <a  href="/elephant/product.html?id=${product.id}" class="card-c__link">
                         <div class="card-c__images">
                             <div class="card-c__image">
-                                <img src="/images/shop/${product.images[0]}" alt="card-image">
+                                <img src="/elephant/images/shop/${product.images[0]}" alt="card-image">
                             </div>
                             <div class="card-c__image">
-                                <img src="/images/shop/${product.images[1]}" alt="card-image">
+                                <img src="/elephant/images/shop/${product.images[1]}" alt="card-image">
                             </div>
                             <div class="card-c__image">
-                                <img src="/images/shop/${product.images[2]}" alt="card-image">
+                                <img src="/elephant/images/shop/${product.images[2]}" alt="card-image">
                             </div>
                         </div>
                         <div class="card-c__price">
@@ -253,7 +297,7 @@ function generateFilterTop(text) {
 
 
 
-async function setCatalog(currentPage, perPage, dataProducts) {
+async function setCatalog(currentPage,  dataProducts) {
     $loader.classList.add('is-open')
     await sleep(1000);
     $loader.classList.remove('is-open')
@@ -263,138 +307,11 @@ async function setCatalog(currentPage, perPage, dataProducts) {
 
     })
 
-    pagination(currentPage, perPage, dataProducts.length)
+    pagination(perPage, dataProducts.length)
 
 }
 
 
 
-function pagination(page, perPage, length) {
-    const url = new URL(window.location);
-    const currentPage = page
-
-    const pagesMaxRightOffset = 3
-    const pagesForShow = 8
-    const totalPages =
-        Math.floor(length / perPage) < length / perPage
-            ? Math.floor(length / perPage) + 1
-            : Math.floor(length / perPage)
-
-    const pagesRemain = totalPages - currentPage
-
-    const pagesEnd = currentPage + Math.min(pagesRemain, pagesMaxRightOffset)
-    const pagesStart = pagesEnd - 8
-
-    let paginationArray = Array.from(
-        {
-            length: totalPages
-        },
-        (value, index) => index + 1
-    )
-
-    // console.log(paginationArray);
-    // if (currentPage <= 4) {
-    //     paginationArray = paginationArray.filter(p => p >= 1 && p <= pagesForShow)
-    // } else {
-    //     paginationArray = paginationArray.filter(
-    //         p => p > pagesStart && p <= pagesEnd
-    //     )
-    // }
-
-    // console.log(paginationArray);
-
-    let item
-
-    if (currentPage > 1) {
-        url.searchParams.set("page", 1);
-        item = `
-            <a
-                class='pagination__first-page pagination__item'
-                href="${url}"
-            >
-               <<
-            </a>
-            `
-
-        $pagination.insertAdjacentHTML('beforeend', item)
-
-    }
-
-    if (currentPage > 1) {
-        url.searchParams.set("page", currentPage - 1);
-
-        item = `
-            <a
-                class='pagination_prev-page pagination__item'
-                  href="${url}"
-            >
-               <
-            </a>
-            `
-        $pagination.insertAdjacentHTML('beforeend', item)
-    }
-
-
-
-
-    paginationArray.forEach(p => {
-        url.searchParams.set("page", p);
-        let className
-
-
-        if (p === (Number(currentPage))) {
-            className = 'pagination__link pagination__link--active'
-
-        } else {
-            className = 'pagination__link'
-        }
-
-
-        item = `
-          <div  class='pagination__item'>
-                        <a
-                            class="${className}"
-                              href="${url}"
-                        >
-                            ${p}
-                        </a>
-                    </div>
-            `
-
-
-        $pagination.insertAdjacentHTML('beforeend', item)
-    })
-
-    if (totalPages > currentPage) {
-        url.searchParams.set("page", currentPage + 1);
-        item = `
-           <a
-                        class='pagination__next-page pagination__item'
-                          href="${url}"
-                    >
-                        >
-                    </a>
-            `
-
-        $pagination.insertAdjacentHTML('beforeend', item)
-
-    }
-
-    if (totalPages > currentPage) {
-        url.searchParams.set("page", totalPages);
-
-        item = `
-          <a
-                        class='pagination__last-page pagination__item'
-                         href="${url}"
-                    >
-                        >>
-                    </a>
-            `
-        $pagination.insertAdjacentHTML('beforeend', item)
-
-    }
-
-}
 
 

@@ -18,6 +18,11 @@
     &:hover{
         background-color: var(--hover-color);
     }
+
+    &:disabled{
+        opacity: 0.5;
+        background-color: var(--color-lightgray);
+    }
 }
 
 .btn-photo{

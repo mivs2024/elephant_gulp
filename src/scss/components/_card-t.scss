@@ -8,9 +8,8 @@
         height: 200px;
         margin-bottom: 10px;
 
-        font-size: 16px;
-        font-weight: 500;
-        color: white;
+     
+        color: white ;
 
         background-color: var(--color-cadet);
         border-radius: 10px;
@@ -58,13 +57,10 @@
 
     &__name {
         margin-bottom: 10px;
-        font-size: 14px;
-        font-weight: 600;
         color: var(--teal-color);
     }
 
     &__descr-link{
-        font-size: 18px;
         color: var(--color-cadet);
 
         &:hover{

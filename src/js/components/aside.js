@@ -4,11 +4,17 @@ const $burger = document.querySelector('.burger');
 const $aside = document.querySelector('.aside');
 const $shadow = document.querySelector('.shadow');
 const $asideClose = document.querySelector('.aside__close');
+const $poppers = document.querySelectorAll('.popper');
 
 window.addEventListener('keydown', (e) => {
     if (e.code == 'Escape') {
-        if ($shadow && $aside?.classList.contains('open'))
+        if ($shadow && $aside?.classList.contains('open')) {
             asideClose()
+        }
+
+        $poppers.forEach(p => {
+            p.removeAttribute('data-show');
+        })
     }
 });
 

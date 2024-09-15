@@ -67,52 +67,39 @@
         margin-top: 20px;
         padding: 0 10px;
         padding-bottom: 20px;
-        
-        
-
-        font-size: 16px;
-        font-weight: 600;
         color: var(--color-cadet);
     }
 
     &__text {
         display: none;
-
         margin-top: 10px;
         padding: 0 10px;
         padding-bottom: 20px;
-
-        font-size: 16px;
-        font-weight: 500;
     }
 
     &__price {
         display: flex;
         column-gap: 5px;
         align-items: end;
-        
+
         margin-top: 10px;
         padding: 0 10px;
+
+        text-wrap: nowrap;
     }
 
     &__price-current {
-        font-size: 20px;
-        font-weight: 700;
         color: var(--teal-color);
         letter-spacing: 0.4px;
     }
     
     &__price-prev {
-        font-size: 14px;
-        font-weight: 500;
         color: #99a3ae;;
         text-decoration: line-through;
         letter-spacing: 0.2px;
     }
 
     &__price-discount {
-        font-size: 14px;
-        font-weight: 700;
         color: #c21c69;;
     }
 }

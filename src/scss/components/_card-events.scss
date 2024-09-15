@@ -5,23 +5,26 @@
     &__link {
         position: relative;
         display: grid;
-        grid-template-columns: repeat(12, 1fr);
+        row-gap: 20px;
+
+        @media (min-width: 1024px) {
+            grid-template-columns: repeat(12, 1fr);
+        }
     }
 
     &__date {
-        grid-column: span 3;
-        font-size: 26px;
-        font-weight: 700;
+        @media (min-width: 1024px) {
+            grid-column: span 3;
+        }
     }
 
     &__content {
         position: relative;
 
         overflow: hidden;
-        grid-column: span 9;
 
         height: 390px;
-      
+
         border: 1px solid #cecdce;
         border-radius: 10px;
 
@@ -38,6 +41,10 @@
             background: linear-gradient(90deg, var(--bg-color) 4%, #ffffff70 100%);
             border-radius: 9px;
         }
+
+        @media (min-width: 1024px) {
+            grid-column: span 9;
+        }
     }
 
     &__img-big {
@@ -50,7 +57,7 @@
     &__block {
         /* stylelint-disable-next-line at-rule-no-unknown */
         @include flex-column-start;
-        
+
         position: relative;
         z-index: 1;
 
@@ -65,15 +72,9 @@
         height: 56px;
     }
 
-    &__name {
-        font-size: 32px;
-    }
-
-    &__desc{
+  
+    &__desc {
         margin-bottom: 14px;
-        font-size: 14px;
-        line-height: 1.3;
         color: var(--dark-color);
-      
     }
 }

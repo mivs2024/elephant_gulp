@@ -1,7 +1,10 @@
+import { createPopper } from '@popperjs/core';
 import ImageZoom from "js-image-zoom";
+import Swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
 import initTabs, { disableScroll } from ".";
-import { isChild } from './utils.js'
 import { setMenu } from './menu-shop.js';
+import { isChild, setRivewsGraph } from "./utils.js";
 
 
 
@@ -16,8 +19,8 @@ if (window.location.pathname.includes('product')) {
     const $rating = document.querySelector('.rating');
     const $right = document.querySelector('.product-card__right');
     const $reviewsMoreBtn = document.querySelector('.product-reviews__more-btn')
-    $reviewsMoreBtn.setAttribute('href', `reviews.html?id=${currentId}`)
-  
+    $reviewsMoreBtn.setAttribute('href', `/elephant/reviews.html?id=${currentId}`)
+
 
 
     const res = await fetch('./resources/products.json')
@@ -30,20 +33,20 @@ if (window.location.pathname.includes('product')) {
     const currentCat = currentProd[0].category
 
     $name.textContent = currentProd[0].name
-   
+
     $brand.textContent = currentProd[0].brand
     $ratingValue.textContent = currentProd[0].rating
     $rating.dataset.value = currentProd[0].rating
-    $mainImage.setAttribute('src', `/images/shop/${currentProd[0].images[0]}`)
+    $mainImage.setAttribute('src', `/elephant/images/shop/${currentProd[0].images[0]}`)
 
-    setMenu(currentCat,dataMenu)
+    setMenu(currentCat, dataMenu)
 
 
     let item = ''
     currentProd[0].images.forEach(m => {
         item = `
         <div class="product-card__image product-card__image">
-                    <img src="/images/shop/${m}" alt="card-product">
+                    <img src="/elephant/images/shop/${m}" alt="card-product">
                 </div>
         `
 
@@ -54,13 +57,15 @@ if (window.location.pathname.includes('product')) {
     currentProd[0].images.forEach(m => {
         item = `
         <div class="product-card__image product-card__image">
-                    <img src="/images/shop/${m}" alt="card-product">
+                    <img src="/elephant/images/shop/${m}" alt="card-product">
                 </div>
         `
 
 
         $images.insertAdjacentHTML('afterbegin', item)
     })
+
+    setSliderCard(currentProd[0].images)
 
 
     const $card = document.querySelector('.product-card');
@@ -130,45 +135,46 @@ if (window.location.pathname.includes('product')) {
 
 
 
-    const $slider = document.querySelector('.products-sb-slider .swiper-wrapper');
 
-    setSlider()
+    setSlider(currentCat, data)
 
-    async function setSlider() {
+ function setSlider(cat, dataProducts) {
 
+        const $productsSbSlider = document.querySelector('.products-sb-slider.swiper')
+        const $sliderWrapper = document.querySelector('.products-sb-slider .swiper-wrapper')
 
-        data.filter(d => d.id <= 10)
+        dataProducts.filter(d => isChild(cat, d.category))
             .forEach(p => {
                 item = `
                     <div class="swiper-slide products-sb__slide">
                         <article class="card-product">
-                            <a href="/product.html?id=${p.id}" class="card-product__link">
+                            <a href="/elephant/product.html?id=${p.id}" class="card-product__link">
                                 <div class="card-product__images">
                                     <div class="card-product__image">
-                                        <img src="/images/shop/${p.images[0]}" alt="card-image">
+                                        <img src="/elephant/images/shop/${p.images[0]}" alt="card-image">
                                     </div>
                                     <div class="card-product__image">
-                                        <img src="/images/shop/${p.images[1]}" alt="card-image">
+                                        <img src="/elephant/images/shop/${p.images[1]}" alt="card-image">
                                     </div>
                                     <div class="card-product__image">
-                                        <img src="/images/shop/${p.images[2]}" alt="card-image">
+                                        <img src="/elephant/images/elephant/${p.images[2]}" alt="card-image">
                                     </div>
                                 </div>
                                 <div class="card-product__price">
-                                    <span class="card-product__price-current">
+                                    <span class="card-product__price-current text-600">
                                          ${p.price}&thinsp;₽
                                     </span>
-                                    <span class="card-product__price-prev">
+                                    <span class="card-product__price-prev text-600">
                                         ${p.prevPrice}&thinsp;₽
                                     </span>
-                                    <span class="card-product__price-discount">
+                                    <span class="card-product__price-discount text-600">
                                         -50%
                                     </span>
                                 </div>
-                                <h3 class="card-product__title">
+                                <h3 class="card-product__title text-600">
                                      ${p.name}
                                 </h3>
-                                <p class="card-product__text">
+                                <p class="card-product__text text">
                                     Надежный и&nbsp;легкий трос с&nbsp;гарантированная безопасность для Вас
                                     и&nbsp;Ваших гостей
                                 </p>
@@ -178,11 +184,165 @@ if (window.location.pathname.includes('product')) {
                     `
 
 
-                $slider.insertAdjacentHTML('afterbegin', item)
+                $sliderWrapper.insertAdjacentHTML('afterbegin', item)
             })
+
+
+
+        if ($productsSbSlider) {
+
+            new Swiper($productsSbSlider, {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                loop: true,
+
+                // configure Swiper to use modules
+                modules: [Navigation, Pagination],
+                pagination: {
+                    el: '.slider-pagination.products-sb__pagination',
+                    bulletClass: 'slider-pagination__bullet',
+                    bulletActiveClass: 'slider-pagination__bullet--active',
+
+                },
+
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.products-sb__next',
+                    prevEl: '.products-sb__prev',
+                },
+
+                breakpoints:{
+                    450: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    640: {
+                        slidesPerView: 4,
+                        spaceBetween: 20,
+                    },
+                    1024: {
+                        slidesPerView: 5,
+                        spaceBetween: 20,
+                    },
+                }
+            });
+        }
+
+
+    }
+
+    function setSliderCard(dataImages) {
+
+        const $productSlider = document.querySelector('.product-card-slider.swiper')
+        const $sliderWrapper = document.querySelector('.product-card-slider .swiper-wrapper')
+
+        dataImages
+            .forEach(p => {
+                item = `
+                    <div class="swiper-slide product-card__slide">
+                         <div class="product-card__card">
+                    <img src="/elephant/images/shop/${p}" alt="image">
+                </div>
+                    </div>
+                    `
+
+
+                $sliderWrapper.insertAdjacentHTML('afterbegin', item)
+            })
+
+
+
+        if ($productSlider) {
+
+            new Swiper($productSlider, {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                loop: true,
+
+                // configure Swiper to use modules
+                modules: [Pagination],
+                pagination: {
+                    el: '.slider-pagination.product-card__pagination',
+                    bulletClass: 'slider-pagination__bullet',
+                    bulletActiveClass: 'slider-pagination__bullet--active',
+
+                },
+              
+            });
+        }
+
 
     }
 
 
+    const $trigger = document.querySelector('.product-card__right .rating');
+    const $popper = document.querySelector('.popper-rating');
+
+    const resReviews = await fetch('./resources/reviews.json')
+    const dataReviews = await resReviews.json();
+
+    const reviewsValues=[]
+    reviewsValues.push(0)
+    reviewsValues.push(0)
+    reviewsValues.push(0)
+    reviewsValues.push(0)
+    reviewsValues.push(0)
+
+    dataReviews.forEach(d => {
+        if (Math.round(d.rating) === 1) {
+            reviewsValues[0] += 1
+        }
+
+        if (Math.round(d.rating) === 2) {
+            reviewsValues[1] += 1
+        }
+
+        if (Math.round(d.rating) === 3) {
+            reviewsValues[2] += 1
+        }
+
+        if (Math.round(d.rating) === 4) {
+            reviewsValues[3] += 1
+        }
+
+        if (Math.round(d.rating) === 5) {
+            reviewsValues[4] += 1
+        }
+
+    })
+
    
+
+    const $reviewsGraph = document.querySelector('.rating-graph');
+
+
+    const popperInstance = createPopper($trigger, $popper, {
+        placement: 'bottom-start',
+    });
+
+    function show() {
+        $popper.setAttribute('data-show', '');
+
+        // We need to tell Popper to update the tooltip position
+        // after we show the tooltip, otherwise it will be incorrect
+        popperInstance.update();
+        setRivewsGraph($reviewsGraph,reviewsValues,dataReviews.length)
+    }
+
+    function hide() {
+        $popper.removeAttribute('data-show');
+    }
+
+    const showEvents = ['mouseenter', 'focus'];
+    const hideEvents = ['mouseleave', 'blur'];
+
+    showEvents.forEach((event) => {
+        $trigger.addEventListener(event, show);
+    });
+
+    hideEvents.forEach((event) => {
+        $trigger.addEventListener(event, hide);
+    });
+
+
 }

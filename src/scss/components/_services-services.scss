@@ -1,14 +1,8 @@
 .services-services{
-    margin-top: 50px;
-
-    &__tabs{
+       &__tabs{
         margin-bottom: 20px;
     }
 
-    &__card{
-        grid-column: 6 span;
-        margin-bottom: 20px;
-    }
 
 
     
@@ -17,6 +11,16 @@
         grid-template-columns: repeat(12,1fr);
         gap: 10px;
 
+    }
+
+    
+    &__card{
+        grid-column: 12 span;
+        margin-bottom: 20px;
+
+        @media (min-width: 640px) {
+            grid-column: 6 span;
+        }
     }
 
 }

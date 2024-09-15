@@ -6,12 +6,12 @@
 
     width: 100%;
     height: 100px;
-    
+
     color: var(--color-cadet);
 
     background-color: var(--bg-color);
 
-    transition: background 0.2s ;
+    transition: background 0.2s;
 
     &--transparent {
         background-color: transparent;
@@ -20,19 +20,17 @@
     &__container {
         position: relative;
         height: 100%;
-        padding: 20px 0;
+        padding-top: 20px;
+        padding-bottom: 20px;
 
         /* stylelint-disable-next-line at-rule-no-unknown */
         @include flex-c-sb;
     }
 
-
-    
-
     &__right {
         /* stylelint-disable-next-line at-rule-no-unknown */
         @include flex-c-sb;
-        
+
         gap: 16px;
     }
 
@@ -41,19 +39,23 @@
         @include flex-c-sb;
 
         gap: 8px;
-
     }
 
     &__tel,
     &__email {
         /* stylelint-disable-next-line at-rule-no-unknown */
         @include flex-c-sb;
-        
+
         gap: 8px;
+
+        &::before {
+            font-family: FontAwesome, sans-serif;
+        }
     }
 
     &__burger {
         margin-right: 10px;
+        font-family: FontAwesome, sans-serif;
     }
 
     &__circle {
@@ -64,5 +66,17 @@
         border-radius: 50%;
 
         transition: 0.2s;
+    }
+
+    &__logo {
+        img {
+            width: 100px;
+            height: 40px;
+
+            @media (min-width: 768px) {
+                width: 200px;
+                height: 80px;
+            }
+        }
     }
 }

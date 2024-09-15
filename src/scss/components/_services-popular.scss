@@ -1,7 +1,9 @@
 .services-popular{
-    margin-top: 100px;
-
     &__slider{
         position: relative;
+    }
+
+    .swiper-slide {
+        max-width: 400px;
     }
 }

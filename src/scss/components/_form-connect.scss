@@ -40,9 +40,20 @@
         }
     }
 
+    &__input.error{
+        &:focus {
+            outline: 2px solid red;
+            outline-offset: 2px;
+        }
+    }
+
     &__input--big {
         resize: none;
         height: 80px;
         padding-top: 10px;
+    }
+
+    &__select{
+        font-size: 13px;
     }
 }

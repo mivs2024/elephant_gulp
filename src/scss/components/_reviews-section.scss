@@ -1,32 +1,26 @@
 .reviews-section{
-    margin-bottom: 50px;
-    
     &__title{
-        margin-bottom: 30px;
-        font-size: 34px;
-        font-weight: 700;
         color: var(--color-cadet);
     }
 
     &__header{
         margin-bottom: 20px;
-        font-size: 16px;
-        font-weight: 400;
         color: var(--color-gray);
-
         
     }
 
     &__count{
         margin-bottom: 20px;
-        font-size: 16px;
-        font-weight: 400;
         color: var(--color-gray);
     }
 
     &__top{
-        display: flex;
         margin-bottom: 30px;
+
+        @media (min-width: 700px) {
+            display: flex;
+            justify-content: space-between;
+        }
     }
 
     &__rating{
@@ -39,14 +33,10 @@
 
     &__value{
         flex: 1 1 auto;
-        font-size: 40px;
-        font-weight: 700;
+        margin-bottom: 10px;
         color: var(--green-dark-color);
     }
 
-    &__graph{
-        width: 300px;
-    }
 
     &__btn{
         margin-bottom: 40px;
@@ -60,48 +50,3 @@
 
 }
 
-.scoring{
-    &__row{
-        display: flex;
-        align-items: stretch;
-        margin-bottom: 20px;
-    }
-
-    &__value{
-        margin-right: 10px;
-        font-size: 14px;
-        color: var(--color-lightgray);
-    }
-
-    &__progress{
-        position: relative;
-
-        overflow: hidden;
-        flex: 1 1 auto;
-
-        margin-right: 10px;
-
-        background-color: var(--color-lightgray);
-        border-radius: 10px;
-
-    }
-
-    &__fill{
-        position: absolute;
-        top: 0;
-        left: 0;
-
-        overflow: hidden;
-
-        height: 100%;
-
-        background-color: red;
-        border-radius: 10px;
-
-    }
-
-    &__count{
-        font-size: 14px;
-        color: var(--color-lightgray);
-    }
-}

@@ -11,6 +11,11 @@
         font-size: 18px;
         font-weight: 700;
         color: var(--dark-color);
+
+    }
+    
+    &.open &__icon{
+        transform: rotate(180deg);
     }
 
     &__body{

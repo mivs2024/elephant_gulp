@@ -2,81 +2,66 @@
     {
         "id": 1,
         "duration": 2,
-        "images":["card1.webp","card2.webp","card1.webp"],
+        "images":["card1.jpg","card2.jpg","card3.jpg"],
         "date": "12/03/2023",
-        "name": "Сун Рат Хан - Тао Пун",
+        "name": "Зеленоград - Коломна",
         "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
     },
     {
         "id": 2,
         "duration": 3,
-        "images":["card6.jpg","card1.jpg","card3.webp"],
+        "images":["card4.jpg","card5.jpg","card6.webp"],
         "date": "12/03/2023",
-        "name": "Банг Сон - Тао Пун",
+        "name": "Балашиха - Обнинск",
         "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
     },
     {
         "id": 3,
         "duration": 3,
-        "images":["card10.jpg","card3.jpg","card2.webp"],
+        "images":["card7.jpg","card8.jpg","card9.jpg"],
         "date": "18/08/2023",
-        "name": "Сун Рат Хан - Банг Сон",
+        "name": "Королев - Мытищи",
         "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
     },
     {
         "id": 4,
         "duration": 3,
-        "images":["card9.jpg","card10.jpg","card8.jpg"],
+        "images":["card10.jpg","card11.jpg","card12.jpg"],
         "date": "22/02/2023",
-        "name": "Дон Мы Анг - Сай Ма",
+        "name": "Щелково - Востряково",
         "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
     },
     {
         "id": 5,
         "duration": 3,
-        "images":["card1.webp","card3.jpg","card2.webp"],
+        "images":["card13.jpg","card14.jpg","card15.jpg"],
         "date": "12/03/2023",
-        "name": "Сай Ма - Патайя",
+        "name": "Строгино - Домодедовская",
         "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
     },
+   
     {
         "id": 6,
-        "duration": 5,
-        "images":["card2.jpg","card3.jpg","card2.webp"],
+        "duration": 3,
+        "images":["card16.jpg","card17.jpg","card18.jpg"],
         "date": "12/03/2023",
-        "name": "Бангкок - Тао Пун",
+        "name": "Можайск - Орехово-Зуево",
         "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
     },
     {
         "id": 7,
-        "duration": 3,
-        "images":["card5.jpg","card6.jpg","card3.webp"],
+        "duration": 4,
+        "images":["card19.jpg","card20.jpg","card21.jpg"],
         "date": "12/03/2023",
-        "name": "Симиланы - Бангкок",
+        "name": "Чехов - Волоколамск",
         "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
     },
     {
         "id": 8,
-        "duration": 3,
-        "images":["card2.jpg","card3.webp","card6.jpg"],
-        "date": "12/03/2023",
-        "name": "Ват Бун - Тао Пун",
-        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
-    },
-    {
-        "id": 9,
-        "duration": 4,
-        "images":["card4.jpg","card7.jpg","card1.webp"],
-        "date": "12/03/2023",
-        "name": "Бангкок - Симиланы",
-        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
-    },
-    {
-        "id": 10,
         "duration": 5,
-        "images":["card1.jpg","card2.webp","card3.webp"],
+        "images":["card22.jpg","card23.jpg","card24.jpg"],
         "date": "12/03/2023",
-        "name": "Фай Чай - Бангкок",
+        "name": "Калуга - Тверь",
         "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic blanditiis"
     }
 ]
