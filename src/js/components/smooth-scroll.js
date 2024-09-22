@@ -3,12 +3,11 @@ import SmoothScroll from 'smooth-scroll';
 
 const toTop = document.querySelector('.to-top');
 const toReviews = document.querySelector('.product-card__reviews');
-if (toTop)
-  new SmoothScroll('.to-top');
+// if (toTop)
+//   new SmoothScroll('.to-top');
 
-if (toReviews)
-
-  new SmoothScroll('.product-card__reviews');
+// if (toReviews)
+//   new SmoothScroll('.product-card__reviews');
 
 let heroHeight;
 

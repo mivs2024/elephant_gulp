@@ -1,4 +1,4 @@
-import { enableScroll ,disableScroll} from "."
+const { enableScroll } = require("./aside");
 
 const $modals = document.querySelectorAll('.modal');
 const $fixed = document.querySelectorAll('.fix-block');

@@ -1,6 +1,7 @@
 .connect {
     position: relative;
     padding-bottom: 40px;
+    
 
     &::before {
         content: "";
@@ -38,6 +39,7 @@
     }
 
     &__form {
+        scroll-margin-top: 100px;
         width: 100%;
 
         @media (min-width: 450px) {

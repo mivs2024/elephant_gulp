@@ -12,7 +12,7 @@ const del = require('del');
 const sourcemaps = require('gulp-sourcemaps');
 var notify = require("gulp-notify");
 var plumber = require('gulp-plumber');
-const destDir='./app/elephant'
+const destDir='./app'
 
 
 function htmlInclude() {
@@ -197,7 +197,7 @@ function watching() {
     browserSync.init({
         server: {
          
-            baseDir: "./app",index:"elephant/index.html"
+            baseDir: "./app",index:"index.html"
         },
     });
     watch(['./src/scss/**/*.scss'], styles);
@@ -208,7 +208,7 @@ function watching() {
     watch('./src/images/**/*.{jpg,jpeg,png,webp,avif,mp4,gif}', images);
     watch('./src/fonts/*.woff2', fonts);
     watch('./src/resources/**', resources);
-    watch(['app/elephant/*.html']).on('change', browserSync.reload);
+    watch(['app/ *.html']).on('change', browserSync.reload);
 }
 
 exports.styles = styles

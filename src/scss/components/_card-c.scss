@@ -24,6 +24,23 @@
         border-radius: 0 0 20px;
     }
 
+    &__wishlist{
+        position: absolute;
+        z-index: 1;
+        top: 10px;
+        right: 10px;
+        
+    }
+
+    &__cart{
+        position: absolute;
+        z-index: 1;
+        top: 10px;
+        right: 50px;
+        
+    }
+
+
     &__images {
         position: relative;
         display: flex;
@@ -35,7 +52,7 @@
         }
     }
 
-    img {
+    &__img {
         pointer-events: none;
         
         position: absolute;

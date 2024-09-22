@@ -31,7 +31,7 @@
         /* stylelint-disable-next-line at-rule-no-unknown */
         @include flex-c-sb;
 
-        gap: 16px;
+        gap: 24px;
     }
 
     &__location {
@@ -50,12 +50,23 @@
 
         &::before {
             font-family: FontAwesome, sans-serif;
+            font-size: 20px;
+        }
+
+        span{
+            display: none;
+
+            @media (min-width: 500px) {
+                display: block;
+            }
         }
     }
 
     &__burger {
         margin-right: 10px;
         font-family: FontAwesome, sans-serif;
+        font-size: 28px;
+        color: var(--color-cadet);
     }
 
     &__circle {

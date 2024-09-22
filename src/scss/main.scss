@@ -10,13 +10,7 @@
 
 @import "./components/btn";
 @import "./components/burger-mobile";
-@import "./components/auth";
-@import "./components/rating-graph";
-@import "./components/popper-rating";
-@import "./components/popper-user";
 @import "./components/checkbox";
-@import "./components/checkbox";
-@import "./components/range-slider";
 @import "./components/to-top";
 @import "./components/tabs";
 @import "./components/banner";
@@ -32,7 +26,6 @@
 @import "./components/section-title";
 @import "./components/top-image-bg";
 @import "./components/card-services";
-@import "./components/card-product";
 @import "./components/card-worker";
 @import "./components/card-events";
 @import "./components/time";
@@ -43,22 +36,15 @@
 @import "./components/block";
 @import "./components/slogan";
 @import "./components/dropdown";
-@import "./components/rating";
-@import "./components/menu-shop";
 
 // компоненты страницы index
 @import "./components/header";
-@import "./components/hero";
-@import "./components/services";
-@import "./components/popular-products";
-@import "./components/events";
-@import "./components/tours";
+@import "./components/main";
 @import "./components/connect";
 @import "./components/footer";
 @import "./components/aside";
 @import "./components/shadow";
 @import "./components/modal";
-@import "./components/player";
 
 // компоненты страницы services
 @import "./components/hero-services";
@@ -75,18 +61,7 @@
 @import "./components/tour-section";
 @import "./components/hero-tour";
 
-// компоненты страницы product
-@import "./components/hero-product";
-@import "./components/product-card";
-@import "./components/products-sb";
-@import "./components/product-reviews";
-@import "./components/product-media";
 
-// компоненты страницы catalog
-@import "./components/header-shop";
-@import "./components/catalog-section";
-@import "./components/loader";
-@import "./components/pagination";
 
 // компоненты страницы about
 @import "./components/hero-about";
@@ -96,12 +71,5 @@
 @import "./components/hero-contacts";
 @import "./components/contacts-section";
 @import "./components/contacts-map";
-
-// компоненты страницы reviews
-@import "./components/hero-reviews";
-@import "./components/reviews-section";
-@import "./components/reviews-media";
-
-@import "./media";
 
 

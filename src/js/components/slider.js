@@ -1,42 +1,13 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination, EffectFade ,Thumbs} from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 // import Swiper and modules styles
 // import 'swiper/swiper-bundle.css';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import 'swiper/css/effect-fade';
 
-const servicesSlider = document.querySelector('.services-slider')
-// init Swiper:
-if(servicesSlider){
 
-    const serv = new Swiper(servicesSlider, {
-        spaceBetween:20,
-        slidesPerView: "auto",
-        loop:"true",
-        // configure Swiper to use modules
-        modules: [Navigation, Pagination],
-        pagination: {
-            el: '.slider-pagination.services__pagination',
-            bulletClass: 'slider-pagination__bullet',
-            bulletActiveClass: 'slider-pagination__bullet--active',
-            clickable: true,
-            //     renderBullet: function (index, className) {
-            //         return `
-            //   <div class="services__bullet ${className}">
-    
-            //   </div>`
-            //     }
-        },
-    
-        // Navigation arrows
-        navigation: {
-            nextEl: '.services__next',
-            prevEl: '.services__prev',
-        },
-    });
-}
+
 
 
 const  reviewsSlider = document.querySelector('.reviews-media__slider')
@@ -56,39 +27,7 @@ if(reviewsSlider){
 }
 
 
-const  eventsSlider = document.querySelector('.events-slider')
 
-if(eventsSlider){
-
-    const events = new Swiper(eventsSlider, {
-    
-        effect: 'fade',
-        slidesPerView: 1,
-        loop: true,
-        // configure Swiper to use modules
-        modules: [Navigation, EffectFade],
-    
-    
-    
-        // Navigation arrows
-        navigation: {
-            nextEl: '.events__next',
-            prevEl: '.events__prev',
-        },
-    });
-    
-    if (events) {
-        const totalSlides = document.querySelector('.events__slides-total');
-        totalSlides.textContent = events.slides.length;
-        const activeSlide = document.querySelector('.events__slide-active');
-        events.on('slideChange', function (s) {
-    
-            activeSlide.textContent = s.realIndex + 1;
-    
-    
-        });
-    }
-}
 
 const  eventsNextSlider = document.querySelector('.events-next-slider')
 

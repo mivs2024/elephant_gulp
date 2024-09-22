@@ -1,6 +1,6 @@
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
 import 'photoswipe/style.css';
-import { disableScroll } from ".";
+import { disableScroll,enableScroll } from './aside';
 
 
 
@@ -21,7 +21,7 @@ if (window.location.pathname.includes('tour')) {
     $breadcrumbName.textContent = currentTour[0].name
 
     $blockImages.forEach((b, index) => {
-        b.setAttribute('src', `/elephant/images/tours/${currentTour[0].images[index]}`)
+        b.setAttribute('src', `/images/tours/${currentTour[0].images[index]}`)
     })
 
 
@@ -56,7 +56,7 @@ if (window.location.pathname.includes('tour')) {
 
     lightbox.addFilter('itemData', (itemData, index) => {
         return {
-            src: `/elephant/images/tours/${currentTour[0].images[index]}`,
+            src: `/images/tours/${currentTour[0].images[index]}`,
              width: 500,
              height: 500
         };;

@@ -1,0 +1,9 @@
+.cart{
+    color: var(--color-cadet);
+
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
